@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser')
+const pageRoutes = require('./apis/routes/pageRoutes');
 
 const app = express();
 
@@ -10,21 +11,9 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
-app.get("/",(req,res)=>{
-    res.render('index');
-})
+app.use("/",pageRoutes);
 
-app.get("/adminLogin",(req,res)=>{
-    res.render('login');
-})
 
-app.get("/departmentLogin",(req,res)=>{
-    res.render('login2');
-})
-
-app.get("/teacherLogin",(req,res)=>{
-    res.render('TLogin');
-})
 
 
 
