@@ -1,0 +1,203 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box
+}
+body {
+    margin: 0
+  }
+  .mySlides {
+    display: none
+  }
+  
+  .slideshow-container {
+    max-width: 100%;
+  }
+ 
+#menubar{
+    display: flex;  
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    height: 90px;
+    background-color: #0c3c60;
+    list-style: none;
+}
+#logo{
+    margin: 10px;
+}
+#navbar >ul li a{
+    text-decoration: none;
+   
+}
+#menubar a{
+    margin: 10px 20px;
+    padding: 10px;
+    position: relative;
+    left: 800px;
+    top:30px;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    color:white;
+}
+#menubar a:after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+#menubar a:hover:after{
+    width: 100%; 
+    left: 0; 
+}
+#options{
+    display: flex;
+    margin-right: 100px;
+    margin-top: -150px;
+    margin-bottom: 100px;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+#options a{
+    text-decoration: none;
+}
+.box{
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+#box-1{
+    
+   background-color: rgb(216, 242, 247);
+}
+#box-2{
+    
+    background-color: #115285;
+}
+#box-3{
+   
+    background-color: rgb(216, 242, 247);
+  
+}
+#secondary{
+    color: black;
+}
+#about{
+    margin: 100px;
+    margin-top: 200px;
+}
+#abt{
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Philosopher', sans-serif;
+}
+#contact{
+    margin: 50px;
+}
+#con{
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Philosopher', sans-serif;
+}
+#quote{
+    display: flex;
+    align-items: center;
+}
+#bq{
+    line-height: 30px;
+    text-align: justify;
+    padding: 50px;
+    font-size: 25px;
+    font-family: 'Akaya Kanadaka', cursive;
+    font-family: 'Dancing Script', cursive;
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+ 
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+#faqs{
+    margin: 50px;
+
+}
+#fq{
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Philosopher', sans-serif;
+}
+#imgbut{
+    display: flex;
+    align-items: center;
+    padding: 60px;
+}
+.button{
+    color: white;
+    background: #115285;
+    font-size: 30px;
+    font-family: 'Philosopher', sans-serif;
+}
+#buts{
+    padding: 60px;
+}
+#divcustumfld, #divcustum, #divcus {
+    transition: opacity 2s linear, max-height 0s linear 0s;
+    opacity: 1;
+    background: rgb(216, 242, 247);
+    height:70px;
+    font-size: 30px;
+    width: 100%;
+    display: none;
+}
+
+#divcustumfld.hidden, #divcustum.hidden, #divcus.hidden {
+    opacity: 0;
+    transition: opacity 2s linear, max-height 0s linear 2s;
+    max-height: 0;
+    overflow:hidden;
+}
+ 
+.footer{
+    background-color: #0c3c60;
+    color: white;
+    height: 40px;
+    text-align: center;
+    font-size: 15px; 
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+}
