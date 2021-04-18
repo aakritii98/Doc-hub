@@ -2,7 +2,10 @@ body {
     background: linear-gradient(to bottom right, rgba(45, 124, 226, 0.7), #90929280 );
     margin: 0;
     padding: 0;
-  }
+  background-image: url(../image/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
   #userimg{
     height: 40px;

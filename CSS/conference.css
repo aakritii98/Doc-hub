@@ -13,21 +13,43 @@ body{
  align-items: center;
  justify-content: center;
  margin-top: 200px;
- 
- margin-left: 20px;
- margin-right: 20px;
- 
+ margin-left: 200px;
+ margin-right: 200px;
 }
 
 .input-container {
   display: flex;
   width: 100%;
   margin-bottom: 15px;
-  margin-left: 20px;
+  margin-left: -100px;
+  height: 30px;
 }
-
-
-
+.input-contain {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    height: 30px;
+  }
+#custom-button
+{
+  padding: 10px;
+  color: white;
+  background-color: teal;
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#custom-button:hover
+{
+    background-color: turquoise;
+}
+#custom-text
+{
+  margin-left: 10px;
+  font-family: sans-serif;
+  color: blue;
+}
 
 .input-field {
   width: 190px;
@@ -36,9 +58,8 @@ body{
 }
 label{
   margin-right: 98px;
+  width: 100%;
 }
-
-
 
 .btn{
 background-color:  rgb(14, 51, 129);
@@ -54,17 +75,16 @@ background-color:  rgb(14, 51, 129);
 .btn:hover{
   background-color: rgb(33, 73, 160);
 }
-#depid{
+#doctype{
   margin-left: 13px;
 
 }
-#depname{
-  margin-left: -13px
+#da{
+  margin-left: 85px
 }
-#deppass{
+/* #deppass{
   margin-left: -38px;
 }
 #conpass{
   margin-left: 20px;
-}
-
+} */
