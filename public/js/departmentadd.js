@@ -24,9 +24,10 @@ const departmentAddApi = async(data)=>{
     const result = await ajax(REQUEST_TYPE["POST"],api,data);
     console.log(result);
     if(result && result.status == "success"){
-        
+        successfull('Department added Successfully!!!')
     }
     else{
+        somethingWentWrong();
         console.log(result.status);
     }
 }
@@ -43,6 +44,7 @@ const getUserInputValues =()=>{
         departmentAddApi(dataObj);
     }
     else{
+        error();
         console.log("details are not filled properly,try again...");
     };
 }

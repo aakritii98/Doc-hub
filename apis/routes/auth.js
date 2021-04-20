@@ -70,7 +70,6 @@ router.post("/signin",(req,res)=>{
                             message:'something went wrong'
                         })
                     }
-                    console.log(user,"user created");
                     const token = jwt.sign({ user: user.email }, "doc-hubJwtSecret");
                     res.json({
                         status:'success',

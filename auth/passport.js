@@ -53,7 +53,8 @@ passport.use(
                     }
                     else{
                         const validate = await user.isPasswordValid(password);
-                        if (validate) {
+                        console.log(validate);
+                        if (!validate) {
                             return done(null, false, { message: 'Wrong Password' });
                           }
                   

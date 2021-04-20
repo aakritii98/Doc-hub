@@ -19,6 +19,7 @@ const signInApi = async(data)=>{
         window.location.href='/adminhome';
     }
     else{
+        errorsMsg(result.status,result.message);
         console.log(result.status);
     }
 }
@@ -31,6 +32,7 @@ const getUserInputValuesSignInAdmin =()=>{
         signInApi(dataObj);
     }
     else{
+        error();
         console.log("details are not filled properly,try again...");
     };
 }

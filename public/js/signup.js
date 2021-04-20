@@ -23,9 +23,11 @@ const signUpApi = async(data)=>{
     if(result && result.status == "success"){
         window.localStorage.setItem("TOKEN",result.token);
         window.localStorage.setItem('USER',result.user.email);
-        // window.location.href='/adminhome';
+        successfull("Sign Up Successful");
+        window.location.href='/adminhome';
     }
     else{
+        errorsMsg(result.status,result.message);
         console.log(result.status);
     }
 }
@@ -41,6 +43,7 @@ const getUserInputValues =()=>{
         signUpApi(dataObj);
     }
     else{
+        error();
         console.log("details are not filled properly,try again...");
     };
 }
