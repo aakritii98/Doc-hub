@@ -4,7 +4,14 @@
 <title> HTML FORM </title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link href="../CSS/signupstylesheet.css" type="text/css" rel="stylesheet">
+<script>
+	let token = localStorage.getItem("TOKEN");
+	if (token && token.length > 12) {
+		window.location.href = "/adminhome"
+	} 
+</script>
 </head>
+
 <body>
      <div class="main">
 	 <h1> Register Yourself here</h1>

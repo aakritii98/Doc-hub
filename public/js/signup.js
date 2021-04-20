@@ -22,6 +22,8 @@ const signUpApi = async(data)=>{
     console.log(result);
     if(result && result.status == "success"){
         window.localStorage.setItem("TOKEN",result.token);
+        window.localStorage.setItem('USER',result.user.email);
+        // window.location.href='/adminhome';
     }
     else{
         console.log(result.status);
@@ -46,7 +48,6 @@ const getUserInputValues =()=>{
 const loadSignupClicks = ()=>{
     $('#signUpSubmitButtonId').unbind();
     $('#signUpSubmitButtonId').click(()=>{
-        console.log("clicked");
         getUserInputValues()
     });
 } 
