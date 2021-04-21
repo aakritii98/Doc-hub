@@ -2,6 +2,10 @@
 <html lang="en">
 
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/checkAuth.js"></script>
+    <script src="../js/ajax.js"></script>
+	<script src="../js/endpoints.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +18,7 @@
             <li class="menu"><a href="#" > <img id="userimg" src="../image/user.png" alt="user"> Admin </a>
                 <ul>
                     <li> <a href="#" > View profile </a> </li>
-                    <li> <a href="#" > Logout </a> </li>
+                    <li> <a href="" onclick="logout()" > Logout </a> </li>
                 </ul>
             </li>
         </ul>
@@ -33,7 +37,7 @@
                 <img src="../image/remove.png" alt="Remove" height="50%">
             </div>
             </a>
-        <a href="#">
+        <a href="/viewdepartments">
         <div class="box"id="box-3">
             <h2 id="secondary">View Department List</h2>
             <img src="../image/viewd.png" alt="Department" height="50%">
@@ -60,5 +64,8 @@
         </div>
         </a>
     </div>
+
+    
+	<script src="../js/comman.js"></script>
 </body>
 </html>

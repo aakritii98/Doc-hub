@@ -3,8 +3,17 @@
 <head> 
 <title> HTML FORM </title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+<script src="../js/sweetalert.js"></script>
 <link href="../CSS/signupstylesheet.css" type="text/css" rel="stylesheet">
+<script>
+	let token = localStorage.getItem("TOKEN");
+	if (token && token.length > 12) {
+		window.location.href = "/adminhome"
+	} 
+</script>
 </head>
+
 <body>
      <div class="main">
 	 <h1> Register Yourself here</h1>
@@ -44,6 +53,7 @@
 	<script src="../js/signup.js"></script>
 	<script src="../js/ajax.js"></script>
 	<script src="../js/endpoints.js"></script>
+
 
 </body>
 </html>

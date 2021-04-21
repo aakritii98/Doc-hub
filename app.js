@@ -1,13 +1,27 @@
 const express = require('express');
 const bodyParser = require('body-parser')
 const pageRoutes = require('./apis/routes/pageRoutes');
-const userRoutes = require('./apis/routes/userRoutes');
+const secureRoutes = require('./apis/routes/secureroutes');
+const auth = require('./apis/routes/auth');
+const departmentRoutes= require('./apis/routes/department');
 const mongoose = require("mongoose");
+const passport = require('passport');
+const requireAuth = passport.authenticate("jwt", { session: false });
 
-mongoose.connect("mongodb://localhost:27017/DocHub" ,  { useNewUrlParser: true,
+
+require('./auth/passport');
+require('./auth/departmentAuth');
+mongoose.connect("mongodb+srv://DocHub:DocHub21@cluster0.ud6bg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority" ,  { useNewUrlParser: true,
    useUnifiedTopology: true,
    useCreateIndex: true,
-   useFindAndModify: false});
+   useFindAndModify: false}).then((err)=>{
+     console.log(err);
+   });
+  //  mongoose.connect("mongodb://localhost:27017/DocHub" ,  { useNewUrlParser: true,
+  //  useUnifiedTopology: true,
+  //  useCreateIndex: true,
+  //  useFindAndModify: false});
+
 
 const app = express();
 
@@ -18,9 +32,11 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
-app.use("/",pageRoutes);
-app.use('/user',userRoutes);
 
+app.use('/auth',auth);
+app.use('/department',requireAuth,departmentRoutes)
+app.use('/sec/',requireAuth,secureRoutes);
+app.use("/",pageRoutes);
 
 
 

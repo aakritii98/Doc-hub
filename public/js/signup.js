@@ -22,8 +22,12 @@ const signUpApi = async(data)=>{
     console.log(result);
     if(result && result.status == "success"){
         window.localStorage.setItem("TOKEN",result.token);
+        window.localStorage.setItem('USER',result.user.email);
+        successfull("Sign Up Successful");
+        window.location.href='/adminhome';
     }
     else{
+        errorsMsg(result.status,result.message);
         console.log(result.status);
     }
 }
@@ -39,6 +43,7 @@ const getUserInputValues =()=>{
         signUpApi(dataObj);
     }
     else{
+        error();
         console.log("details are not filled properly,try again...");
     };
 }
@@ -46,7 +51,6 @@ const getUserInputValues =()=>{
 const loadSignupClicks = ()=>{
     $('#signUpSubmitButtonId').unbind();
     $('#signUpSubmitButtonId').click(()=>{
-        console.log("clicked");
         getUserInputValues()
     });
 } 

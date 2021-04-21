@@ -17,23 +17,45 @@ router.get("/teacherLogin",(req,res)=>{
     res.render('TLogin');
 })
 
-router.get("/adminHomePage",(req,res)=>{
-    res.render('admin');
-})
+
 router.get("/signup",(req,res)=>{
     res.render('signup');
 })
+router.get("/adminhome",(req,res)=>{
+    res.render('admin');
+})
 
 router.get("/addDepartment",(req,res)=>{
-    res.render('adminadd');
+    res.render('departmentadd');
 })
 router.get("/removeDepartment",(req,res)=>{
-    res.render('adminremove');
+    res.render('departmentremove');
 })
 
 router.get("/department",(req,res)=>{
     res.render('depart');
 })
+router.get("/viewDepartments",(req,res)=>{
+    res.render('viewdepartment');
+})
+router.get('/addresearch',(req,res)=>{
+    res.render('adresearch');
+})
+router.get('/finaleditprofile',(req,res)=>{
+    res.render('finaleditprofile');
+})
+router.get('/adresearch',(req,res)=>{
+    res.render('adresearch');
+})
+router.get('/teacher',(req,res)=>{
+    res.render('teacher');
+    
+})
+router.get('/trecords',(req,res)=>{
+    res.render('trecords');
+
+})
+
 
 
 module.exports = router

@@ -1,0 +1,142 @@
+
+body {
+    background-image: url("../image/viewdepbg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+  }
+
+#userimg{
+    height: 40px;
+    width: 40px;
+}
+
+ul.Nav2 {
+    list-style-type:none;
+    margin:0 auto;
+    padding:0;
+    overflow:hidden;
+    width:auto;
+    font-size: 30px;
+  }
+  
+  ul.Nav2>li {
+    float:right;
+  }
+  
+  ul.Nav2 li a {
+    font-family: 'Roboto', sans-serif;
+    font-size:30px;
+    color:black;
+    display:block;
+    width:160px;
+    height:40px;
+    line-height:40px;
+    background-color:rgb(216, 242, 247);
+    text-align:left;
+    text-decoration:none;
+    padding:0px 0px;
+    -o-transition:all 0.2s ease-in-out;
+    transition:all 0.2s ease-in-out;
+  }
+  
+  ul.Nav2 li a:hover {
+    opacity:1;
+    color: white;
+  }
+  
+  ul.Nav2 ul {
+    list-style:none;
+    position:absolute;
+    left:-9999px;
+    text-align:right;
+    float:right;
+    display: block;
+    padding:0;
+    min-width:9.3ex;
+  }
+  
+  ul.Nav2 ul li {
+    padding-top:1px;
+    float:none;
+  }
+  
+  ul.Nav2 ul a {
+    white-space:nowrap;
+  }
+  
+  ul.Nav2 li:hover ul {
+    left:inherit;
+  }
+  
+  ul.Nav2 li:hover a {
+    background:#115285;
+    text-decoration:none;
+  }
+  
+  ul.Nav2 li:hover ul a { 
+    text-decoration:none;
+  }
+  h1{
+      color:white;
+      text-align: center;
+      font-size: 60px;
+  }
+#options1{
+    display: flex;
+    margin-right: 100px;
+    margin-top: 70px;
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#options2{
+    display: flex;
+    margin-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center; 
+}
+#options1 a{
+    text-decoration: none;
+}
+#options2 a{
+    text-decoration: none;
+}
+
+.box{
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.cardClass{
+  text-align: center;
+  padding: 5%;
+}
+
+#box-1{
+    
+   background-color:white;
+}
+#box-2{
+    
+    background-color:white;
+}
+#box-3{
+   
+    background-color: white;
+  
+}
+#secondary{
+    color: black;
+}
