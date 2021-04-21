@@ -36,5 +36,4 @@ router.get("/department",(req,res)=>{
 })
 
 
-
 module.exports = router
