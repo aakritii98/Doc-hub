@@ -2,6 +2,11 @@
     margin: 0px;
     padding: 0px;
 }
+body{
+  background-image: url(../image/bg2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 #menu{
  display: flex;
@@ -20,6 +25,7 @@
   width: 100%;
   margin-bottom: 15px;
   margin-left: 20px;
+  height: 30px;
 }
 
 
@@ -37,7 +43,7 @@ label{
 
 
 .btn{
-background-color:  rgb(14, 51, 129);
+    background-color: rgb(0 23 72);
     padding: 15px 20px;
     margin-left: 132px;
     border: none;
@@ -50,17 +56,19 @@ background-color:  rgb(14, 51, 129);
 .btn:hover{
   background-color: rgb(33, 73, 160);
 }
-#depid{
-  margin-left: 13px;
+#teacherid{
+  margin-left: 1px;
 
 }
-#depname{
-  margin-left: -13px
+#teachername{
+  margin-left: -24px
 }
-#deppass{
-  margin-left: -38px;
+#teacherdep{
+  margin-left: -49px;
+}
+#teacherpass{
+  margin-left: -45px
 }
 #conpass{
-  margin-left: 20px;
-}
-
+    margin-left: -10px
+  }

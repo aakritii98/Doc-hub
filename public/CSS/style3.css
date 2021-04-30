@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to bottom right, rgba(45, 124, 226, 0.7), #90929280 );
+    background-image: url(../image/background.jpg);
     margin: 0;
     padding: 0;
   }
@@ -30,7 +30,7 @@ ul.Nav2 {
     width:310px;
     height:50px;
     line-height:40px;
-    background-color:#CCC;
+    background-color:rgb(216, 242, 247);
     text-align:left;
     text-decoration:none;
     padding:0px 0px;
@@ -75,11 +75,15 @@ ul.Nav2 {
   ul.Nav2 li:hover ul a { 
     text-decoration:none;
   }
-
+  h1{
+    color:white;
+    text-align: center;
+    font-size: 50px;
+}
 #options1{
     display: flex;
     margin-right: 100px;
-    margin-top: 250px;
+    margin-top: 70px;
     margin-bottom: 100px;
     height: 100%;
     width: 100%;

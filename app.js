@@ -26,7 +26,6 @@ mongoose.connect("mongodb+srv://DocHub:DocHub21@cluster0.ud6bg.mongodb.net/myFir
 const app = express();
 
 app.set('view engine', 'ejs');
-
 app.use(bodyParser.urlencoded({
   extended: true
 }));

@@ -25,24 +25,31 @@ router.get("/adminhome",(req,res)=>{
     res.render('admin');
 })
 
-router.get("/addDepartment",(req,res)=>{
+router.get("/departmentadd",(req,res)=>{
     res.render('departmentadd');
 })
 router.get("/removeDepartment",(req,res)=>{
     res.render('departmentremove');
 })
 
-router.get("/department",(req,res)=>{
+router.get("/depart",(req,res)=>{
     res.render('depart');
+})
+router.get("/teacheradd",(req,res)=>{
+    res.render('teacheradd');
+})
+router.get("/teacherremove",(req,res)=>{
+    res.render('teacherremove');
 })
 router.get("/viewDepartments",(req,res)=>{
     res.render('viewdepartment');
 })
-router.get('/addresearch',(req,res)=>{
-    res.render('adresearch');
-})
+
 router.get('/finaleditprofile',(req,res)=>{
     res.render('finaleditprofile');
+})
+router.get('/departmenteditprofile',(req,res)=>{
+    res.render('departmenteditprofile');
 })
 router.get('/adresearch',(req,res)=>{
     res.render('adresearch');
@@ -54,6 +61,18 @@ router.get('/teacher',(req,res)=>{
 router.get('/trecords',(req,res)=>{
     res.render('trecords');
 
+})
+router.get('/publications',(req,res)=>{
+    res.render('publications');
+})
+router.get('/conference',(req,res)=>{
+    res.render('conference');
+})
+router.get('/teacherbook',(req,res)=>{
+    res.render('teacherbook');
+})
+router.get('/academicaward',(req,res)=>{
+    res.render('academicaward');
 })
 
 

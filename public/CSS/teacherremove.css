@@ -13,11 +13,10 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 margin-top: 200px;
-
-margin-left: 500px;
+margin-left: 200px;
 margin-right: 20px;
-
 }
+
 .input-container {
 display: flex;
 width: 100%;
@@ -33,22 +32,23 @@ outline: none;
 label{
 margin-right: 98px;
 }
-#departmentRemoveSubmitButtonID:hover{
+#teacherRemoveSubmitButtonID:hover{
 background-color: rgb(35, 67, 155);
 }
-#departmentId{
+#teacherId{
   margin-left: -10px;
   height: 39px;
   width: 230px;
 }
-#departmentRemoveSubmitButtonID{
+#teacherRemoveSubmitButtonID{
   background-color: rgb(0 23 72);
   padding: 15px 20px;
-  margin-right: 600px;
+  margin-right: 300px;
   border: none;
   cursor: pointer;
   width: 115px;
   opacity: 0.9;
   color: white;
   margin-top: 30px;
+  margin-left: 100px;
 }

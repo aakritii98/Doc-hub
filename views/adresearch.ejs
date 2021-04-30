@@ -30,31 +30,6 @@
             <label for="rname">Enter name of funding agency:</label>
             <input type="string" id="rname" name="rname" placeholder="Research project name"><br>
         </div>
-        <div class="input-container">
-            <label for="fname">Upload your file here:</label>
-            <input type="file" id="real-file" hidden="hidden"/>
-            <button type="button" id="custom-button" >Choose</button>
-            <span id="custom-text">No file choosen</span>
-
-            <script type="text/javascript">
-                const realFileBtn=document.getElementById("real-file");
-                const customBtn=document.getElementById("custom-button");
-                const customTxt=document.getElementById("custom-text");
-
-                customBtn.addEventListener("click", function(){
-                    realFileBtn.click();
-                });
-
-                realFileBtn.addEventListener("change",function(){
-                    if(realFileBtn.value)
-                    {
-                        customTxt.innerHTML=realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
-                    }
-                    else    
-                        customTxt.innerHTML="No file choosen";
-                })
-            </script>
-        </div>
         
         <button class="btn">Add</button>
         

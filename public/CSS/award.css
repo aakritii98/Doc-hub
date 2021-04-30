@@ -3,9 +3,9 @@
     padding: 0px;
 }
 body{
-  background-image: url(../image/bg2.jpg);
-background-repeat: no-repeat;
-background-size: cover;
+    background-image: url(../image/bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #menu{
  display: flex;
@@ -23,25 +23,6 @@ background-size: cover;
   margin-bottom: 15px;
   margin-left: 20px;
   height: 30px;
-}
-#custom-button
-{
-  padding: 10px;
-  color: white;
-  background-color: teal;
-  border: 1px solid #000;
-  border-radius: 5px;
-  cursor: pointer;
-}
-#custom-button:hover
-{
-    background-color: turquoise;
-}
-#custom-text
-{
-  margin-left: 10px;
-  font-family: sans-serif;
-  color: blue;
 }
 
 .input-field {
@@ -68,16 +49,10 @@ background-color:  rgb(14, 51, 129);
 .btn:hover{
   background-color: rgb(33, 73, 160);
 }
-#doctype{
-  margin-left: 13px;
 
+#adate{
+    margin: -1px;
+    margin-left: -167px;
+    width: 203px;
+    height: 100%;
 }
-#da{
-  margin-left: 85px
-}
-/* #deppass{
-  margin-left: -38px;
-}
-#conpass{
-  margin-left: 20px;
-} */

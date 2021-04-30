@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conference</title>
+    <link rel="stylesheet" href="../CSS/conference.css">
+  
+</head>
+
+<body>
+    <div id="menu">
+
+    <form>
+        <div class="input-container">
+            <label for="doctype">Enter Teacher Id:</label>
+            <input type="string" id="doctype" name="teacherid" placeholder="Teacher Id"><br>
+        </div>
+        <div class="input-container">
+            <label for="doctype">Enter Record Type:</label>
+            <input type="string" id="doctype" name="recordtype" placeholder="Record Type"><br>
+        </div>
+        <div class="input-container">
+            <label for="doctype">Enter Record Nature:</label>
+            <input type="string" id="doctype" name="recordnature" placeholder="Record Nature"><br>
+        </div>
+        <div class="input-container">
+            <label for="doctype">Enter Record Title:</label>
+            <input type="string" id="doctype" name="recordtitle" placeholder="Record Title"><br>
+        </div>
+        <div class="input-container">
+            <label for="doctype">Enter Record Place:</label>
+            <input type="string" id="doctype" name="recordplace" placeholder="Record Place"><br>
+        </div>
+        <div class="input-container">
+            <label for="doctype">Enter  Record date:</label>
+            <input type="date" id="doctype" name="recorddate" placeholder="Record Date" style="width:380px" ><br>
+        </div>
+        <div class="input-container">
+            <label for="doctype">Enter Record Details:</label>
+            <input type="string" id="doctype" name="recorddetail" placeholder="Record Details"><br>
+        </div>
+        <div class="input-container">
+            <label for="fname">Upload your file here:</label>
+            <input type="file" id="real-file" hidden="hidden"/>
+            <button type="button" id="custom-button" >Choose</button>
+            <span id="custom-text">No file choosen</span>
+
+            <script type="text/javascript">
+                const realFileBtn=document.getElementById("real-file");
+                const customBtn=document.getElementById("custom-button");
+                const customTxt=document.getElementById("custom-text");
+
+                customBtn.addEventListener("click", function(){
+                    realFileBtn.click();
+                });
+
+                realFileBtn.addEventListener("change",function(){
+                    if(realFileBtn.value)
+                    {
+                        customTxt.innerHTML=realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+                    }
+                    else    
+                        customTxt.innerHTML="No file choosen";
+                })
+            </script>
+        </div>
+        
+        <button class="btn">Add</button>
+        
+    </form>
+</div>
+</body>
+</html>
