@@ -1,58 +1,103 @@
 *{
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 body{
-  background-image: url(../image/bg2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+background-repeat: no-repeat;
+background-size: cover;
+background-color:blueviolet;
 }
-#menu{
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- margin-top: 200px;
- margin-left: 20px;
- margin-right: 20px;
+.menu{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-top: 100px;
+margin-left: 20px;
+margin-right: 20px;
 }
-
+.box
+{
+  width: 70%;
+  height: 560px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  /* display: flex;
+  flex-direction: column; */
+  border:2px solid #06314e;
+  background-color:white;
+  /* align-content: center; */
+  /* box-shadow: 5px 10px #0c20cf; */
+}
 .input-container {
-  display: flex;
-  width: 100%;
-  margin-bottom: 15px;
-  margin-left: 20px;
-  height: 30px;
+display: flex;
+width: 100%;
+margin-bottom: 15px;
+margin-left: 20px;
+height: 30px;
 }
 
 
 .input-field {
-  width: 190px;
-  padding: 10px;
-  outline: none;
+width: 190px;
+padding: 10px;
+outline: none;
 }
 label{
-  margin-right: 98px;
-  width: 100%;
+margin-right: 98px;
+width: 100%;
 }
 
 .btn{
 background-color:  rgb(14, 51, 129);
-    padding: 15px 20px;
-    margin-left: 132px;
-    border: none;
-    cursor: pointer;
-    width: 126px;
-    opacity: 0.9;
-    color: white;
-    margin-top: 30px;
+  padding: 15px 20px;
+  margin-left: 50px;
+  border: none;
+  cursor: pointer;
+  width: 126px;
+  opacity: 0.9;
+  color: white;
+  margin-top: 30px;
 }
 .btn:hover{
-  background-color: rgb(33, 73, 160);
+background-color: rgb(33, 73, 160);
 }
 #bdate {
-    margin: -1px;
-    margin-left: -167px;
-    width: 203px;
-    height: 100%;
+  margin: -1px;
+  margin-left: 0px;
+  width: 230px;
+  height: 100%;
+}
+#bname {
+margin: -1px;
+margin-left: 0px;
+width: 230px;
+height: 100%;
+}
+#bpub {
+margin: -1px;
+margin-left: 0px;
+width: 230px;
+height: 100%;
+}
+#bauthor {
+margin: -1px;
+margin-left: 0px;
+width: 230px;
+height: 100%;
+}
+#btype {
+margin: -1px;
+margin-left: 0px;
+width: 230px;
+height: 100%;
+}
+.row {
+display: flex;
+}
+
+.column {
+flex: 50%;
 }

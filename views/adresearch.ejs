@@ -11,29 +11,34 @@
 </head>
 
 <body>
-    <div id="menu">
-
+        <div class="box row">
+            <div class="column" id="imaged">
+                <img src="../image/addresearch.jpg" style="height:450px;width:470px; margin:70px 70px 70px 70px;">
+            </div>
+        
+        <div class="menu column">
     <form>
-        <div class="input-container">
-            <label for="doctype">Enter Teacher ID:</label>
-            <input type="string" id="doctype" name="doctype" placeholder="Teacher ID"><br>
+        <!-- <div class="input-container">
+            <label for="doctype">Enter Teacher Id:</label>
+            <input type="string" id="doctype" name="teacherid" placeholder="Teacher Id"><br>
+        </div> -->
+        <div class="input-container-title">
+            <!-- <label for="rname">Enter title of project/programme of research project:</label> -->
+            <input type="string" id="rtitle" name="rname" placeholder="Title of Research project "><br>
         </div>
         <div class="input-container">
-            <label for="rname">Enter name of research project:</label>
-            <input type="string" id="rname" name="rname" placeholder="Research project name"><br>
+            <!-- <label for="amt">Enter amount of rupees released:</label> -->
+            <input type="string" id="amt" name="amt" placeholder="Name of Funding Agency"><br>
         </div>
         <div class="input-container">
-            <label for="amt">Enter amount of rupees released:</label>
-            <input type="string" id="amt" name="amt" placeholder="Amount(in rupees)"><br>
-        </div>
-        <div class="input-container">
-            <label for="rname">Enter name of funding agency:</label>
-            <input type="string" id="rname" name="rname" placeholder="Research project name"><br>
+            <!-- <label for="rname">Enter name of funding agency:</label> -->
+            <input type="string" id="rname" name="rname" placeholder="Amount released (in rupees)"><br>
         </div>
         
         <button class="btn">Add</button>
         
     </form>
+</div>
 </div>
 </body>
 </html>

@@ -1,83 +1,122 @@
 *{
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 body{
-  background-image: url(../image/bg2.jpg);
 background-repeat: no-repeat;
 background-size: cover;
+background-color:rgb(15, 170, 124);
 }
-#menu{
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- margin-top: 200px;
- margin-left: 20px;
- margin-right: 20px;
+.box
+{
+  width: 60%;
+  height: 560px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  /* display: flex;
+  flex-direction: column; */
+  border:2px solid #06314e;
+  background-color:white;
+  /* align-content: center; */
+  /* box-shadow: 5px 10px #0c20cf; */
 }
-
+::placeholder { 
+color: black;
+}
+.menu{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-top: 50px;
+margin-left: 20px;
+margin-right: 20px;
+}
+.input-container-title{
+display: flex;
+width: 100%;
+margin-bottom: 30px;
+margin-left: 20px;
+height: 30px;
+}
 .input-container {
-  display: flex;
-  width: 100%;
-  margin-bottom: 15px;
-  margin-left: 20px;
-  height: 30px;
+display: flex;
+width: 100%;
+margin-bottom: 20px;
+margin-left: 20px;
+height: 30px;
 }
 #custom-button
 {
-  padding: 10px;
-  color: white;
-  background-color: teal;
-  border: 1px solid #000;
-  border-radius: 5px;
-  cursor: pointer;
+padding: 10px;
+color: white;
+background-color: teal;
+border: 1px solid #000;
+border-radius: 5px;
+cursor: pointer;
 }
 #custom-button:hover
 {
-    background-color: turquoise;
+  background-color: turquoise;
 }
 #custom-text
 {
-  margin-left: 10px;
-  font-family: sans-serif;
-  color: blue;
+margin-left: 10px;
+font-family: sans-serif;
+color: blue;
 }
 
 .input-field {
-  width: 190px;
-  padding: 10px;
-  outline: none;
+width: 190px;
+padding: 10px;
+outline: none;
 }
 label{
-  margin-right: 98px;
-  width: 100%;
+margin-right: 98px;
+width: 100%;
 }
 
 .btn{
 background-color:  rgb(14, 51, 129);
-    padding: 15px 20px;
-    margin-left: 132px;
-    border: none;
-    cursor: pointer;
-    width: 126px;
-    opacity: 0.9;
-    color: white;
-    margin-top: 30px;
+  padding: 15px 20px;
+  margin-left: 42px;
+  border: none;
+  cursor: pointer;
+  width: 126px;
+  opacity: 0.9;
+  color: white;
+  margin-top: 30px;
 }
 .btn:hover{
-  background-color: rgb(33, 73, 160);
+background-color: rgb(33, 73, 160);
 }
 #doctype{
-  margin-left: 13px;
+margin-left: 13px;
 
 }
 #da{
-  margin-left: 85px
+margin-left: 85px
 }
-/* #deppass{
-  margin-left: -38px;
+.row {
+display: flex;
 }
-#conpass{
-  margin-left: 20px;
-} */
+
+.column {
+flex: 50%;
+}
+#rname{
+margin-left:-10px;
+width:200px;
+}
+#amt{
+margin-left:-10px;
+width:200px;
+}
+#rtitle{
+margin-top:10px;
+margin-left:-10px;
+width:200px;
+height: 30px;
+}

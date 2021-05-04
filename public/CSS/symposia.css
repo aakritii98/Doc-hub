@@ -1,0 +1,141 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.box
+{
+    width: 70%;
+    height: 560px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* display: flex;
+    flex-direction: column; */
+    border:2px solid #06314e;
+    background-color:white;
+    /* align-content: center; */
+    /* box-shadow: 5px 10px #0c20cf; */
+}
+body{
+  /* background-image: url(../image/bg2.jpg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color:rgb(87, 30, 139);
+}
+::placeholder { 
+  color: black;
+}
+.menu{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ margin-top: 60px;
+ margin-left: 150px;
+ margin-right: 100px;
+}
+
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-left: -90px;
+  height: 30px;
+}
+.input-contain {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    height: 30px;
+  }
+#custom-button
+{
+  padding: 10px;
+  color: white;
+  background-color: teal;
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#custom-button:hover
+{
+    background-color: turquoise;
+}
+#custom-text
+{
+  margin-left: 10px;
+  font-family: sans-serif;
+  color: blue;
+}
+#real-life{
+  margin-top:300px;
+}
+.input-field {
+  width: 190px;
+  padding: 10px;
+  outline: none;
+}
+label{
+  margin-right: 98px;
+  width: 80%;
+}
+#filechoose{
+  margin-top:100px;
+}
+.btn{
+background-color:  rgb(14, 51, 129);
+    padding: 15px 20px;
+    margin-left: 20px;
+    border: none;
+    cursor: pointer;
+    width: 126px;
+    opacity: 0.9;
+    color: white;
+    margin-top: 30px;
+}
+.btn:hover{
+  background-color: rgb(33, 73, 160);
+}
+#doctype{
+  margin-left: 13px;
+
+}
+#da{
+  margin-left: 85px
+}
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+#rtype{
+ margin-left:-10px;
+ width:425px;
+ }
+#rnature{
+  margin-left:-10px;
+  
+  width:425px;
+
+  }
+#rtitle{
+    margin-left:-10px;
+    width:425px;
+    } 
+#rplace{
+      margin-left:-10px;
+      width:425px;
+      } 
+#rdate{
+        margin-left:-10px;
+        width:425px;
+        } 
+#rdetails{
+ margin-left:-10px;
+ width:425px;
+ height:100px;
+}    

@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>conference</title>
-    <link rel="stylesheet" href="../CSS/conference.css">
+    <title>seminar</title>
+    <link rel="stylesheet" href="../CSS/seminar.css">
   
 </head>
  
 <body>
     <div class="box row">
         <div class="column" id="imaged">
-            <img src="../image/addconf.png" style="height:450px;width:400px; margin:70px 70px 70px 70px;">
+            <img src="../image/addseminar.jpg" style="height:450px;width:400px; margin:70px 70px 70px 70px;">
         </div>
     
     <div class="menu column">
@@ -36,7 +36,7 @@
         <div class="input-container">
             <!-- <label for="doctype">Enter Record Nature:</label> -->
             <select name="rnature" id="rnature" onchange="populate(this.id,'rtitle')">
-                <option hidden >Nature of Conference</option>
+                <option hidden >Nature of Seminar</option>
                 <option value="Organized"  id="Organized">Organized</option>
                 <option value="member" id="memeber">Chairperson/moderator/member</option>
                 <option value="Participation" id="Participation" >Participation </option>
@@ -45,20 +45,20 @@
         <div class="input-container">
             <!-- <label for="doctype">Enter Record Title:</label> -->
             <select id="rtitle" name="rtitle" >
-                <option hidden >Title  of Conference</option>
+                <option hidden >Title of Seminar</option>
             </select>
         </div>
         <div class="input-container">
             <!-- <label for="doctype">Enter Record Place:</label> -->
-            <input type="string" id="rplace" name="recordplace" placeholder="Place of Conference"><br>
+            <input type="string" id="rplace" name="recordplace" placeholder="Place of Seminar"><br>
         </div>
         <div class="input-container">
             <!-- <label for="doctype">Enter  Record date:</label> -->
-            <input type="date" id="rdate" name="recorddate" placeholder="Date  of Conference" style="width:380px" ><br>
+            <input type="date" id="rdate" name="recorddate" placeholder="Date of Seminar" style="width:380px" ><br>
         </div>
         <div class="input-container">
             <!-- <label for="doctype">Enter Record Details:</label> -->
-            <textarea type="string" id="rdetails" name="recorddetail" placeholder="Details  of Conference"></textarea><br>
+            <textarea type="string" id="rdetails" name="recorddetail" placeholder="Details of Seminar"></textarea><br>
         </div>
         <div class="input-container" id="filechoose">
             <label for="fname">Upload your certificate:</label>

@@ -11,27 +11,38 @@
 </head>
 
 <body>
-    <div id="menu">
-
+    <div class="box row">
+        <div class="column" id="imaged">
+            <img src="../image/addpub.jpg" style="height:450px;width:400px; margin:70px 70px 70px 70px;">
+        </div>
+    
+    <div class="menu column">
     <form>
-        <div class="input-container">
+        <!-- <div class="input-container">
             <label for="doctype">Enter Teacher ID:</label>
             <input type="string" id="doctype" name="doctype" placeholder="Teacher ID"><br>
+        </div> -->
+        <div class="input-container">
+            <!-- <label for="jnature">Enter Journal nature:</label> -->
+            <select name="jnature" >
+                <option hidden >Nature of Journal</option>
+                <option value="A1" size=90>A1 Journal</option>
+                <option value="A2" size=90>A2 Journal</option>
+                <option value="B" size=90>B Journal</option>
+                <option value="C" size=90>C Journal</option>
+                <option value="O" size=90>Non referred Journal/conference proceedings</option>
+           </select><br>
         </div>
         <div class="input-container">
-            <label for="jnature">Enter Journal nature:</label>
-            <input type="string" id="jnature" name="jnature" placeholder="Journal nature"><br>
+            <!-- <label for="jtitle">Enter Journal title:</label> -->
+            <input type="string" id="jtitle" name="jtitle" placeholder="Title of Journal"><br>
         </div>
         <div class="input-container">
-            <label for="jtitle">Enter Journal title:</label>
-            <input type="string" id="jtitle" name="jtitle" placeholder="Journal title"><br>
-        </div>
-        <div class="input-container">
-            <label for="jname">Enter Journal Name:</label>
-            <input type="string" id="jname" name="jname" placeholder="Journal name"><br>
+            <!-- <label for="jname">Enter Journal Name:</label> -->
+            <input type="string" id="jname" name="jname" placeholder="Name of Journal"><br>
         </div> 
         <div class="input-container">
-            <label for="jdate">Enter Date of acceptance:</label>
+            <!-- <label for="jdate">Enter Date of acceptance:</label> -->
             <input type="date" id="jdate" name="jdate" placeholder="Date of acceptance"><br>
         </div>    
         <button class="btn">Add</button>

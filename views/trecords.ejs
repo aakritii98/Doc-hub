@@ -1,24 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="../CSS/tyrecords.css" rel="stylesheet">
-</head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body{
+        background-image: url("../image/addrecord.png")  ;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+.sideNav {
+   height: 100vh;
+   width: 0;
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   left: 0;
+   background-color: rgb(46, 218, 195);
+   overflow-x: hidden;
+   padding-top: 60px;
+   transition: 0.5s;
+}
+.sideNav a {
+   padding: 8px 8px 8px 32px;
+   text-decoration: none;
+   font-size: 25px;
+   color: #000000;
+   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+   display: block;
+   transition: 0.3s;
+}
 
+.link{
+  
+    border:rgb(59, 58, 58) solid 2px;
+ 
+  
+ 
+}
+.link:hover{
+   
+    background-color:rgb(119, 231, 216);
+}
+.sideNav .closeBtn {
+   position: absolute;
+   top: 0;
+   right: 25px;
+   font-size: 36px;
+   margin-left: 50px;
+}
+button {
+   padding: 15px;
+   background-color: rgb(0, 27, 145);
+   color: rgb(255, 255, 255);
+   font-size: 20px;
+   border: none;
+   border-radius: 2%;
+}
+.main-content{
+   transition: 0.5s;
+}
+</style>
+</head>
 <body>
-    <h1>Add your Documents</h1>
-    <div class="box">
-        <div class="box2">
-        <a href="/adresearch"><div class="item" id="item-1">Research Project</div></a>
-        <a href="/conference"><div class="item" id="item-2">Conference/Symposia/Workshop/Seminar</div></a>
-        <a href="/publications"><div class="item" id="item-3">Publications</div></a>
-        <a href="/teacherbook"><div class="item" id="item-4">Books</div></a>
-        <a href="/academicaward"><div class="item" id="item-5">Academic Awards</div></a>
-    </div>
-    </div>
+<nav class="sideNav">
+ <a  href="#" class="closeBtn">×</a>
+    <a class="link"href="#">Research Project</a>
+    <a class="link"href="#">Conference</a>
+    <a class="link"href="#">Symposia</a>
+    <a class="link" href="#">Seminar</a>
+    <a class="link"href="#">Workshop</a>
+    <a class="link"href="#">Publications</a>
+    <a class="link"href="#">Books</a>
+    <a class="link"href="#">Academic Awards</a>
+   
+
+
+</nav>
+<main class="main-content">
+<button class="openSideNav"><i class="fa fa-navicon"></i></button>
+
+</main>
+<script>
+let openBtn = document.querySelector(".openSideNav");
+openBtn.addEventListener("click", () => {
+   showNav();
+});
+let closeBtn = document.querySelector(".closeBtn");
+closeBtn.addEventListener("click", () => {
+   hideNav();
+});
+function showNav() {
+   document.querySelector(".sideNav").style.width = "300px";
+   document.querySelector('.main-content').style.marginLeft = "300px";
+}
+function hideNav() {
+   document.querySelector(".sideNav").style.width = "0";
+   document.querySelector('.main-content').style.marginLeft = "0px";
+}
+</script>
 </body>
 </html>
