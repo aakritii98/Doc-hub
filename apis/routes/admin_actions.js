@@ -6,6 +6,7 @@ const Department = require('../models/departmentSchema');
 
 
 
+
 router.post('/departmentadd',(req,res,next)=>{
     console.log('hello');
     passport.authenticate('departmentAdd',(err,department,info)=>{
@@ -46,7 +47,6 @@ router.post('/departmentadd',(req,res,next)=>{
         }
     })(req, res, next)
 })
-
 
 router.post('/removeDepartment',(req,res)=>{
     console.log(req.body);

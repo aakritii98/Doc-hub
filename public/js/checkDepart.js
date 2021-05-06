@@ -1,9 +1,9 @@
 const checkauthAPI = async()=>{
-    const api = API_LIST['CHECKAUTH'];
+    const api = API_LIST['CHECKDEPARTMENT'];
     try {
         const result = await ajax(REQUEST_TYPE["GET"],api,{});
         console.log(result);
-        if(!result && !(result.status=="success")){
+        if(!result || !(result.status=="success")){
             window.location.href='/';
         }     
     } catch (error) {
@@ -12,7 +12,7 @@ const checkauthAPI = async()=>{
             window.location.href='/';
         }
         console.log(error);
-    }
+    }       
    
 }
 const checkToken=()=>{

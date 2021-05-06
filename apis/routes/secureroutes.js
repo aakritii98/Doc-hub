@@ -1,8 +1,22 @@
 const express = require('express');
 const router = express.Router();
-router.get("/checkauthFromFront",(req,res)=>{
-    if(req.user){
-        res.json({status:'success',message:'User verfyfied'});
+
+router.get("/checkDepartmentFront",(req,res)=>{
+    if(req.user.department_id){
+        res.json({status:'success',message:'Department varfified'});
+    }
+    else{
+        res.json({});
+    }
+})
+
+router.get('/checkAdminFront',(req,res)=>{
+        console.log(req.user);
+    if(req.user.email){
+        res.json({status:'success',message:'Admin varified'});
+    }
+    else{
+        res.json({});
     }
 })
 

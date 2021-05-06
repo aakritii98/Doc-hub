@@ -18,7 +18,7 @@ router.post('/signup',(req,res,next)=>{
                 console.log(err);
                 res.json({
                     status:'failure',
-                    message:'email already exist'
+                    message:info.message
                 })
             }
             else{

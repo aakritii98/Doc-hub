@@ -4,9 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+    <script src="../js/sweetalert.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../CSS/logindh.css" type="text/css" rel="stylesheet">
     <title>Login-page</title>
+
+    <script>
+        let token = localStorage.getItem("TOKEN");
+        if (token && token.length > 12) {
+            window.location.href = "/depart"
+        } 
+    </script>
 </head>
 
 <body>
@@ -14,23 +24,28 @@
         <h1>Login</h1>
         <div class="textbox">
             <i class="fa fa-user" aria-hidden="true"></i>
-            <input type="text" placeholder="Username" name="" value="">
+            <input type="text" placeholder="Username" id="departmentEmailInputId" >
 
         </div>
         <div class="textbox">
             <i class="fa fa-lock" aria-hidden="true"></i>
-            <input type="password" placeholder="Password" name="" value="">
+            <input type="password" placeholder="Password" id="departmentPasswordInputId">
         </div>
         
         <div class="check">
             <input type="checkbox" placeholder="">Remember me
         </div>
-        <a href="/depart">
-        <input class="btn" type="button" name="" value="Log in"> </a>
+        <button class="btn" style="background:#06314e;height:40px;width:100px;font-size:20px; color:white;" type="button" id="signInDepartmentSubmitButtonId">Login</button>
         <div class="pass">
             <p><a href="#">Forgot Password</a></p>
         </div>
     </div>
+
+
+        
+	<script src="../js/department_js/departmentLogin.js"></script>
+	<script src="../js/ajax.js"></script>
+	<script src="../js/endpoints.js"></script>
 </body>
 
 </html>

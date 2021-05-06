@@ -32,9 +32,6 @@ router.get("/removeDepartment",(req,res)=>{
     res.render('departmentremove');
 })
 
-router.get("/depart",(req,res)=>{
-    res.render('depart');
-})
 router.get("/teacheradd",(req,res)=>{
     res.render('teacheradd');
 })
@@ -51,9 +48,7 @@ router.get('/finaleditprofile',(req,res)=>{
 router.get('/departmenteditprofile',(req,res)=>{
     res.render('departmenteditprofile');
 })
-router.get('/adresearch',(req,res)=>{
-    res.render('adresearch');
-})
+
 router.get('/teacher',(req,res)=>{
     res.render('teacher');
     
@@ -61,6 +56,11 @@ router.get('/teacher',(req,res)=>{
 router.get('/trecords',(req,res)=>{
     res.render('trecords');
 
+})
+
+
+router.get('/adresearch',(req,res)=>{
+    res.render('adresearch');
 })
 router.get('/publications',(req,res)=>{
     res.render('publications');
@@ -74,7 +74,19 @@ router.get('/teacherbook',(req,res)=>{
 router.get('/academicaward',(req,res)=>{
     res.render('academicaward');
 })
+router.get('/symposia',(req,res)=>{
+    res.render('symposia');
+})
+router.get('/seminar',(req,res)=>{
+    res.render('seminar');
+})
+router.get('/workshop',(req,res)=>{
+    res.render('workshop');
+})
 
+router.get("/depart",(req,res)=>{
+    res.render('depart');
+})
 
 
 module.exports = router

@@ -29,17 +29,10 @@ departmentSchmema.pre('save',async function(next){
     next();
 })
 departmentSchmema.methods.isPasswordValid = async function(password){
-    user = this;
+    department = this;
     console.log(password);
-    bcrypt.compare(password, department.department_password,(err,result)=>{
-            if(result){
-                console.log("hlfkgkfkg");
-                return result
-            }
-            else {
-                return err;
-            }
-    });
+    const res = await bcrypt.compare(password, department.department_password);
+    return res;
 }
 
 module.exports = mongoose.model('departments',departmentSchmema);

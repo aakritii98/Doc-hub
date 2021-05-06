@@ -13,10 +13,19 @@ const API_LIST = {
 
     SIGNUP : `${API_SERVER}auth/signup/`,
     SIGNIN : `${API_SERVER}auth/signin/`,
-    CHECKAUTH:`${API_SERVER}sec/checkauthFromFront/`,
+
+    CHECKDEPARTMENT:`${API_SERVER}sec/checkDepartmentFront/`,
+    CHECKADMIN:`${API_SERVER}sec/checkAdminFront/`,
+    
+
     ADMINHOEPAGE: `${API_SERVER}adminhome/`,
-    POSTDEPARTMENTADD:`${API_SERVER}department/departmentAdd/`,
-    POSTDEPARTMENTREMOVE:`${API_SERVER}department/removeDepartment/`,
-    GETALLDEPARTMENTS:`${API_SERVER}department/viewDepartment/`
+    POSTDEPARTMENTADD:`${API_SERVER}adminActions/departmentAdd/`,
+    POSTDEPARTMENTREMOVE:`${API_SERVER}adminActions/removeDepartment/`,
+    GETALLDEPARTMENTS:`${API_SERVER}adminActions/viewDepartment/`,
+
+    ADDTEACHERPOST:`${API_SERVER}departmentActions/teacheradd/`,
+
+
+    DEPARTMENTSIGNIN:`${API_SERVER}departmentLogin/departmentsignin/`,
 
 }
