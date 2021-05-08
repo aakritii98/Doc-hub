@@ -1,3 +1,48 @@
+
+const checkValidationAddReasearch = (data)=>{
+    if(data.research_title ==''){
+        return false;
+    }
+    else if(data.research_fundingAgency ==''){
+        return false;
+    }
+    else if(data.research_amount==''){
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+
+
+const AddTeacherRecordsDetailsAPI = async(data)=>{
+    const api = API_LIST["ADDTEACHERRECORDS"];
+    const result = await ajax(REQUEST_TYPE["POST"],api,data);
+    console.log(result);
+    if(result && result.status == "success"){
+        successfull('Record Added Successfully!!!')
+    }
+    else{
+        somethingWentWrong();
+        console.log(result.status);
+    }
+}
+
+const getInputValuesAddTeacherDetails = (recordType)=>{
+    const dataObj = {}
+    dataObj.record_type = recordType;
+    dataObj.research_title = $("#rtitle8 ").val();
+    dataObj.research_fundingAgency = $("#amt8").val();
+    dataObj.research_amount = $("#rname8").val();
+    if(checkValidationAddReasearch(dataObj)){
+            AddTeacherRecordsDetailsAPI(dataObj);
+    }
+    else{
+        error();
+        console.log("details are not filled properly,try again...");
+    };
+}
+
 const loadclicks = () => {
     $('.sideBarClass').unbind();
     $('.sideBarClass').click(function () {
@@ -43,6 +88,12 @@ const loadclicks = () => {
         }
 
     });
+
+    $('#researchAddSubmitButtonId').unbind();
+    $('#researchAddSubmitButtonId').click(()=>{
+        getInputValuesAddTeacherDetails("research");
+    })
+
 }
 
 $(document).ready(() => {

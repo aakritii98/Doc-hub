@@ -20,4 +20,14 @@ router.get('/checkAdminFront',(req,res)=>{
     }
 })
 
+
+router.get('/checkTeacherFront',(req,res)=>{
+    console.log(req.user);
+if(req.user.teacher_id){
+    res.json({status:'success',message:'Teacher varified'});
+}
+else{
+    res.json({});
+}
+})
 module.exports = router;

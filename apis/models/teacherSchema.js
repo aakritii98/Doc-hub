@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
-
-
+const teacherRecords = require('./teacher_records_schema')
 const teacherSchema = mongoose.Schema({
     department_id:{
         type:String,
@@ -22,8 +21,10 @@ const teacherSchema = mongoose.Schema({
     teacher_password:{
         type:String,
         required:true
-    }
+    },
+    teacher_records:[teacherRecords],
 });
+
 
 
 teacherSchema.pre('save',async function(next){

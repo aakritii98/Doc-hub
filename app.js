@@ -5,8 +5,8 @@ const secureRoutes = require('./apis/routes/secureroutes');
 const auth = require('./apis/routes/auth');
 const adminActionsRoutes= require('./apis/routes/admin_actions');
 const departmentActionsRoutes= require('./apis/routes/department_actions');
+const teacherActionsRoutes= require('./apis/routes/teacher_actions');
 
-const departmentsignin = require('./apis/routes/department_login')
 const mongoose = require("mongoose");
 const passport = require('passport');
 const requireAuth = passport.authenticate("jwt", { session: false });
@@ -34,9 +34,9 @@ app.use(express.static("public"));
 
 
 app.use('/auth',auth);
-app.use('/departmentLogin',departmentsignin);
 app.use('/adminActions',requireAuth,adminActionsRoutes);
 app.use('/departmentActions',requireAuth,departmentActionsRoutes);
+app.use('/teacherActions',requireAuth,teacherActionsRoutes);
 
 app.use('/sec/',requireAuth,secureRoutes);
 app.use("/",pageRoutes);

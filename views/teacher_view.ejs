@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc Hub</title>
+    <link href="../CSS/teacher_view.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        function changeLanguage(language) {
+            var element = document.getElementById("url");
+            element.value = language;
+            element.innerHTML = language;
+        }
+
+        function showDropdown() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        
+        <!-- three dot menu -->
+        <div class="dropdown">
+            <!-- three dots -->
+            <ul class="dropbtn icons btn-right showLeft" onclick="showDropdown()">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <!-- menu -->
+            <div id="myDropdown" class="dropdown-content">
+                <div class="text-center">
+                    <a href="" class="btn btn-default" data-toggle="modal"
+                        data-target="#modalAddForm">Add Teacher</a>
+                </div>
+                <div class="text-center">
+                    <a href="" class="btn btn-default" data-toggle="modal"
+                        data-target="#modalRemoveForm">Remove Teacher</a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <input class="form-input" type="text" id="searchboxId" placeholder="&#128269 Search...">
+            <button id="searchButtonId">Search</button>
+        </div>
+    </div>
+    <div class="modal fade" id="modalAddForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Add Teacher</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-3">
+                    <div class="md-form mb-5">
+                        <input type="text" id="form34" class="form-control validate">
+                        <label data-error="wrong" data-success="right" for="form34">Teacher ID</label>
+                    </div>
+
+                    <div class="md-form mb-5">
+                        <input type="email" id="form29" class="form-control validate">
+                        <label data-error="wrong" data-success="right" for="form29">Teacher name</label>
+                    </div>
+
+                    <div class="md-form mb-5">
+                        <input type="text" id="form32" class="form-control validate">
+                        <label data-error="wrong" data-success="right" for="form32">Teacher Password</label>
+                    </div>
+
+                    <div class="md-form">
+                        <input type="text" id="form8" class="form-control validate">
+                        <label data-error="wrong" data-success="right" for="form8">Confirm Password</label>
+                    </div>
+
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button class="btn btn-primary font-weight-bold">ADD </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalRemoveForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Remove Teacher</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-3">
+                    <div class="md-form mb-5">
+                        <input type="text" id="form34" class="form-control validate">
+                        <label data-error="wrong" data-success="right" for="form34">Teacher ID</label>
+                    </div>
+
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button class="btn btn-primary font-weight-bold mb1 bg-blue">REMOVE </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1>Teacher List</h1>
+    <div class="row" id="teacherCardsParentID">
+        <div class="col-md-4 col-sm-6 col-12">
+            <div class="container cardClass">
+                <h2 id="secondary"> Kuldeep Yogi</h2>
+                <h2 style="font-size: medium;"></h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/sweetalert.js"></script>
+    <script src="../js/checkDepart.js"></script>
+    <script src="../js/teacher_js/teacher_view.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/endpoints.js"></script>
+</body>
+
+</html>

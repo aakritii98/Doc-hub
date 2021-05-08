@@ -2,7 +2,7 @@ const express = require("express");
 const passport = require('passport');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
-// const Department = require('../models/departmentSchema');
+const Teacher = require('../models/teacherSchema');
 
 
 router.post('/teacheradd',(req,res,next)=>{
@@ -45,5 +45,46 @@ router.post('/teacheradd',(req,res,next)=>{
         }
     })(req, res, next)
 })
+router.post('/teacherremove',(req,res)=>{
+    console.log(req.body);
+    const teacherId=req.body.teacher_id;
+    Teacher.findOneAndDelete({teacher_id:teacherId}).then((result)=>{
+        if(result){
+            res.json({
+                status:"success",
+                message:"Teacher Deleted Successfully",
+                teacher:result,
+            });
 
+        } 
+        else{
+            res.json({
+                status:"failure",
+                message:"Teacher Not Found"
+            });
+        } 
+      })
+})
+
+
+router.get('/teacher_view',(req,res)=>{
+    const departmentId = req.user.department_id;
+    console.log(departmentId,"helllo buddy");
+    Teacher.find({department_id:departmentId}).then((result)=>{
+        if(result){
+            res.json({
+                status:'success',
+                message:'view success',
+                data:result
+            });
+        }
+        else{
+            res.json({
+                status:'failure',
+                message:'No data found',
+            })
+        }
+    })
+
+})
 module.exports = router

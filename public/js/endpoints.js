@@ -16,7 +16,10 @@ const API_LIST = {
 
     CHECKDEPARTMENT:`${API_SERVER}sec/checkDepartmentFront/`,
     CHECKADMIN:`${API_SERVER}sec/checkAdminFront/`,
+    CHECKTEACHER:`${API_SERVER}sec/checkTeacherFront/`,
     
+
+
 
     ADMINHOEPAGE: `${API_SERVER}adminhome/`,
     POSTDEPARTMENTADD:`${API_SERVER}adminActions/departmentAdd/`,
@@ -24,8 +27,13 @@ const API_LIST = {
     GETALLDEPARTMENTS:`${API_SERVER}adminActions/viewDepartment/`,
 
     ADDTEACHERPOST:`${API_SERVER}departmentActions/teacheradd/`,
+    REMOVETEACHERPOST:`${API_SERVER}departmentActions/teacherremove/`,
+    GETALLTEACHERS:`${API_SERVER}departmentActions/teacher_view/`,
+
+    DEPARTMENTSIGNIN:`${API_SERVER}auth/departmentsignin/`,
+    TEACHERSIGNIN:`${API_SERVER}auth/teachersignin/`,
 
 
-    DEPARTMENTSIGNIN:`${API_SERVER}departmentLogin/departmentsignin/`,
+    ADDTEACHERRECORDS:`${API_SERVER}teacherActions/teacherrecordadd/`,
 
 }

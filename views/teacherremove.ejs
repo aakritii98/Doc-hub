@@ -6,17 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Remove</title>
     <link rel="stylesheet" href="../CSS/teacherremove.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+
 </head>
 <body>
     <div id="menu">
-        <form>
         <div class="input-container">
             <label for="teacherid">Enter Teacher Id:</label>
             <input type="text" id="teacherId" name="teacherpid" placeholder="Teacher Id"><br>
         </div>
         <button class="btn" id="teacherRemoveSubmitButtonID">Remove</button>
-    </form>
     </div>
     
+    <script src="../js/sweetalert.js"></script>
+    <script src="../js/checkDepart.js"></script>
+    <script src="../js/teacher_js/teacher_remove.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/endpoints.js"></script>
 </body>
 </html>

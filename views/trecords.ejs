@@ -2,546 +2,1147 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <title>Document</title>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <style>
-      body {
-         background-image: url("../image/addrecord.png");
-         background-repeat: no-repeat;
-         background-size: cover;
-      }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-      .sideNav {
-         height: 100vh;
-         width: 0;
-         position: fixed;
-         z-index: 1;
-         top: 0;
-         left: 0;
-         background-color: rgb(46, 218, 195);
-         overflow-x: hidden;
-         padding-top: 60px;
-         transition: 0.5s;
-      }
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-      .sideNav a {
-         padding: 8px 8px 8px 32px;
-         text-decoration: none;
-         font-size: 25px;
-         color: #000000;
-         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-         display: block;
-         transition: 0.3s;
-      }
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
-      .link {
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <title>Document</title>
+    <style>
+        @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
-         border: rgb(59, 58, 58) solid 2px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            font-family: arial
+        }
 
+        body {
+            background: #eee;
+            font-family: 'Poppins', sans-serif;
+            background: #fafafa;
+        }
 
+        .wrapper {
+            position: relative
+        }
 
-      }
+        .sidebar {
+            position: fixed;
+            width: 250px;
+            height: 100%;
+            background: black;
+            padding: 10px 0
+        }
 
-      .link:hover {
+        .wrapper .sidebar ul li {
+            padding: 15px
+        }
 
-         background-color: rgb(119, 231, 216);
-      }
+        .wrapper .sidebar ul li a {
+            color: #bdb8d7;
+            display: block;
+            text-align: center;
+            font-size: 20px;
+        }
 
-      .sideNav .closeBtn {
-         position: absolute;
-         top: 0;
-         right: 25px;
-         font-size: 36px;
-         margin-left: 50px;
-      }
+        .wrapper .sidebar ul li:hover {
+            background: #311B92
+        }
 
-      button {
-         padding: 15px;
-         background-color: rgb(0, 27, 145);
-         color: rgb(255, 255, 255);
-         font-size: 20px;
-         border: none;
-         border-radius: 2%;
-      }
+        .wrapper .sidebar ul li a:hover {
+            color: #fff;
+            text-decoration: none
+        }
 
-      .main-content {
-         transition: 0.5s;
-      }
-   </style>
+        .wrapper1 {
+            display: flex;
+            width: 100%;
+            align-items: stretch;
+            margin-left: 250px;
+        }
+
+        #content {
+            width: 100%;
+            padding: 20px;
+            min-height: 100vh;
+            transition: all 0.3s
+        }
+
+        .content-wrapper {
+            padding: 15px;
+        }
+
+        .box8 {
+            width: 98%;
+            height: 35rem;
+            margin-top: 3%;
+            border: 2px solid #06314e;
+            background-color: white;
+        }
+
+        ::placeholder {
+            color: black;
+        }
+
+        .input-container-title8 {
+            display: flex;
+            width: 100%;
+            margin-bottom: 30px;
+            margin-left: 20px;
+            height: 30px;
+        }
+
+        .input-container8 {
+            display: flex;
+            width: 100%;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            height: 30px;
+        }
+
+        .btn8 {
+            background-color: rgb(14, 51, 129);
+            padding: 15px 20px;
+            margin-left: 42px;
+            border: none;
+            cursor: pointer;
+            width: 126px;
+            opacity: 0.9;
+            color: white;
+            margin-top: 30px;
+        }
+
+        .btn8:hover {
+            background-color: rgb(33, 73, 160);
+        }
+
+        #rname8 {
+             /* margin-left: -10px; */
+            width: 200px;
+        }
+
+        #amt8 {
+             /* margin-left: -10px; */
+            width: 200px;
+        }
+
+        #rtitle8 {
+            margin-top: 10px;
+             /* margin-left: -10px; */
+            width: 200px;
+            height: 30px;
+        }
+
+        .divContainerParentDiv {
+            width: 75.3%;
+            margin-left: 24.7%;
+        }
+
+        .box2 {
+            width: 98%;
+            height: 35rem;
+            margin-top: 3%;
+            border: 2px solid #06314e;
+            background-color: white;
+        }
+
+        .input-container2 {
+            display: flex;
+            width: 100%;
+            margin-bottom: 15px;
+            margin-left: -90px;
+            height: 30px;
+        }
+
+        #custom-button2 {
+            padding-left: 10px;
+            padding-right: 10px;
+            color: white;
+            background-color: teal;
+            border: 1px solid #000;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #custom-button2:hover {
+            background-color: turquoise;
+        }
+
+        #custom-text2 {
+            margin-left: 10px;
+            font-family: sans-serif;
+            color: blue;
+        }
+
+        #real-file2 {
+            margin-top: 300px;
+        }
+
+        #filechoose2 {
+            margin-top: 100px;
+        }
+
+        .btn2 {
+            background-color: rgb(14, 51, 129);
+            padding: 15px 20px;
+            margin-left: 20px;
+            border: none;
+            cursor: pointer;
+            width: 126px;
+            opacity: 0.9;
+            color: white;
+            margin-top: 30px;
+        }
+
+        .btn2:hover {
+            background-color: rgb(33, 73, 160);
+        }
+
+        #rnature2 {
+            /* margin-left: -10px; */
+            width: 425px;
+        }
+
+        #rtitle2 {
+            /* margin-left: -10px; */
+            width: 425px;
+        }
+
+        #rplace2 {
+            /* margin-left: -10px; */
+            width: 425px;
+        }
+
+        #rdate2 {
+             /* margin-left: -10px; */
+            width: 450px;
+        }
+
+        #rdetails2 {
+             /* margin-left: -10px; */
+            width: 425px;
+            height: 100px;
+        }
+
+        .box7 {
+            width: 98%;
+            height: 35rem;
+            margin-top: 7%;
+            border: 2px solid #06314e;
+            background-color: white;
+        }
+
+        .input-container7 {
+            display: flex;
+            width: 100%;
+            margin-bottom: 15px;
+            margin-left: 20px;
+            height: 30px;
+        }
+
+        .btn7 {
+            background-color: rgb(14, 51, 129);
+            padding: 15px 20px;
+            margin-left: 132px;
+            border: none;
+            cursor: pointer;
+            width: 126px;
+            opacity: 0.9;
+            color: white;
+            margin-top: 30px;
+        }
+
+        .btn7:hover {
+            background-color: rgb(33, 73, 160);
+        }
+
+        #jdate7 {
+            margin: -1px;
+            margin-left: 0px;
+            width: 290px;
+            height: 100%;
+        }
+
+        #jname7 {
+            margin: -1px;
+            margin-left: 0px;
+            width: 290px;
+            height: 100%;
+        }
+
+        #jtitle7 {
+            margin: -1px;
+            margin-left: 0px;
+            width: 290px;
+            height: 100%;
+        }
+
+        .box5 {
+            width: 98%;
+            height: 35rem;
+            margin-top: 7%;
+            border: 2px solid #06314e;
+            background-color: white;
+        }
+
+        .input-container5 {
+            display: flex;
+            width: 100%;
+            margin-bottom: 15px;
+            margin-left: -90px;
+            height: 30px;
+        }
+
+        #custom-button5 {
+            padding-left: 10px;
+            padding-right: 10px;
+            color: white;
+            background-color: teal;
+            border: 1px solid #000;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #custom-button5:hover {
+            background-color: turquoise;
+        }
+
+        #custom-text5 {
+            margin-left: 10px;
+            font-family: sans-serif;
+            color: blue;
+        }
+
+        #real-file5 {
+            margin-top: 300px;
+        }
+
+        #filechoose5 {
+            margin-top: 100px;
+        }
+
+        .btn5 {
+            background-color: rgb(14, 51, 129);
+            padding: 15px 20px;
+            margin-left: 20px;
+            border: none;
+            cursor: pointer;
+            width: 126px;
+            opacity: 0.9;
+            color: white;
+            margin-top: 30px;
+        }
+
+        .btn5:hover {
+            background-color: rgb(33, 73, 160);
+        }
+
+        #rnature5 {
+             /* margin-left: -10px; */
+            width: 425px;
+        }
+
+        #rtitle5 {
+             /* margin-left: -10px; */
+            width: 425px;
+        }
+
+        #rplace5 {
+             /* margin-left: -10px; */
+            width: 425px;
+        }
+
+        #rdate5 {
+             /* margin-left: -10px; */
+            width: 425px;
+        }
+
+        #rdetails5 {
+             /* margin-left: -10px; */
+            width: 425px;
+            height: 100px;
+        }
+
+        .box3 {
+            width: 98%;
+            height: 35rem;
+            margin-top: 7%;
+            border: 2px solid #06314e;
+            background-color: white;
+        }
+
+        .input-container3 {
+            display: flex;
+            width: 100%;
+            margin-bottom: 15px;
+            margin-left: -90px;
+            height: 30px;
+        }
+
+        #custom-button3 {
+            padding-left: 10px;
+            padding-right: 10px;
+            color: white;
+            background-color: teal;
+            border: 1px solid #000;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #custom-button3:hover {
+            background-color: turquoise;
+        }
+
+        #custom-text3 {
+            margin-left: 10px;
+            font-family: sans-serif;
+            color: blue;
+        }
+
+        #real-file3 {
+            margin-top: 300px;
+        }
+
+        #filechoose3 {
+            margin-top: 100px;
+        }
+
+        .btn3 {
+            background-color: rgb(14, 51, 129);
+            padding: 15px 20px;
+            margin-left: 20px;
+            border: none;
+            cursor: pointer;
+            width: 126px;
+            opacity: 0.9;
+            color: white;
+            margin-top: 30px;
+        }
+
+        .btn3:hover {
+            background-color: rgb(33, 73, 160);
+        }
+
+        #rnature3 {
+             /* margin-left: -10px; */
+            width: 425px;
+        }
+
+        #rtitle3 {
+             /* margin-left: -10px; */
+            width: 425px;
+        }
+
+        #rplace3 {
+             /* margin-left: -10px; */
+            width: 425px;
+        }
+
+        #rdate3 {
+             /* margin-left: -10px; */
+            width: 425px;
+        }
+
+        #rdetails3 {
+             /* margin-left: -10px; */
+            width: 425px;
+            height: 100px;
+        }
+
+        .box6 {
+            width: 98%;
+            height: 35rem;
+            margin-top: 7%;
+            border: 2px solid #06314e;
+            background-color: white;
+        }
+
+        .input-container6 {
+            display: flex;
+            width: 100%;
+            margin-bottom: 15px;
+            margin-left: -90px;
+            height: 30px;
+        }
+
+        #custom-button6 {
+            padding-left: 10px;
+            padding-right: 10px;
+            ;
+            color: white;
+            background-color: teal;
+            border: 1px solid #000;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #custom-button6:hover {
+            background-color: turquoise;
+        }
+
+        #custom-text6 {
+            margin-left: 10px;
+            font-family: sans-serif;
+            color: blue;
+        }
+
+        #real-file6 {
+            margin-top: 300px;
+        }
+
+        #filechoose6 {
+            margin-top: 100px;
+        }
+
+        .btn6 {
+            background-color: rgb(14, 51, 129);
+            padding: 15px 20px;
+            margin-left: 20px;
+            border: none;
+            cursor: pointer;
+            width: 126px;
+            opacity: 0.9;
+            color: white;
+            margin-top: 30px;
+        }
+
+        .btn6:hover {
+            background-color: rgb(33, 73, 160);
+        }
+
+        #rnature6 {
+             /* margin-left: -10px; */
+            width: 425px;
+        }
+
+        #rtitle6 {
+             /* margin-left: -10px; */
+            width: 425px;
+        }
+
+        #rplace6 {
+             /* margin-left: -10px; */
+            width: 425px;
+        }
+
+        #rdate6 {
+             /* margin-left: -10px; */
+            width: 425px;
+        }
+
+        #rdetails6 {
+             /* margin-left: -10px; */
+            width: 425px;
+            height: 100px;
+        }
+
+        .box4 {
+            width: 98%;
+            height: 35rem;
+            margin-top: 7%;
+            border: 2px solid #06314e;
+            background-color: white;
+        }
+
+        .input-container4 {
+            display: flex;
+            width: 100%;
+            margin-bottom: 15px;
+            margin-left: 20px;
+            height: 30px;
+        }
+
+        .btn4 {
+            background-color: rgb(14, 51, 129);
+            padding: 15px 20px;
+            margin-left: 50px;
+            border: none;
+            cursor: pointer;
+            width: 126px;
+            opacity: 0.9;
+            color: white;
+            margin-top: 30px;
+        }
+
+        .btn4:hover {
+            background-color: rgb(33, 73, 160);
+        }
+
+        #bdate4 {
+            margin: -1px;
+            margin-left: 0px;
+            width: 230px;
+            height: 100%;
+        }
+
+        #bname4 {
+            margin: -1px;
+            margin-left: 0px;
+            width: 230px;
+            height: 100%;
+        }
+
+        #bpub4 {
+            margin: -1px;
+            margin-left: 0px;
+            width: 230px;
+            height: 100%;
+        }
+
+        #bauthor4 {
+            margin: -1px;
+            margin-left: 0px;
+            width: 230px;
+            height: 100%;
+        }
+
+        #btype4 {
+            margin: -1px;
+            margin-left: 0px;
+            width: 230px;
+            height: 100%;
+        }
+
+        .box1 {
+            width: 98%;
+            height: 35rem;
+            margin-top: 7%;
+            border: 2px solid #06314e;
+            background-color: white;
+        }
+
+        .input-container1 {
+            display: flex;
+            width: 100%;
+            margin-bottom: 15px;
+            margin-left: 20px;
+            height: 30px;
+        }
+
+        .btn1 {
+            background-color: rgb(14, 51, 129);
+            padding: 15px 20px;
+            margin-left: 132px;
+            border: none;
+            cursor: pointer;
+            width: 126px;
+            opacity: 0.9;
+            color: white;
+            margin-top: 100px;
+        }
+
+        .btn1:hover {
+            background-color: rgb(33, 73, 160);
+        }
+
+        #adate1 {
+            margin: -1px;
+            /* margin-left: 50px; */
+            width: 280px;
+            height: 100%;
+        }
+
+        #atitle1 {
+            margin: -1px;
+            /* margin-left: 50px; */
+            width: 280px;
+            height: 100%;
+        }
+
+        #adetails1 {
+            margin: -1px;
+            /* margin-left: 50px; */
+            width: 280px;
+            height: 100px;
+        }
+    </style>
 </head>
 
 <body>
-   <nav class="sideNav">
-      <a href="#" class="closeBtn">×</a>
-      <a class="link sideBarClass" href="#" data-value='adResearchDivParentId'>Research Project</a>
-      <a class="link sideBarClass" data-value='confrenceAddDivId' href="#">Conference</a>
-      <a class="link sideBarClass" data-value='symposiaAddDivId' href="#">Symposia</a>
-      <a class="link sideBarClass" data-value='seminarAddDivId' href="#">Seminar</a>
-      <a class="link sideBarClass" data-value='workshopAddDivId' href="#">Workshop</a>
-      <a class="link sideBarClass" data-value='publicationsAddDivId' href="#">Publications</a>
-      <a class="link sideBarClass" data-value='teacherbookAddDivId' href="#">Books</a>
-      <a class="link sideBarClass" data-value='awardAddDivId' href="#">Academic Awards</a>
+    <div class="wrapper d-flex">
+        <div class="sidebar">
+            <ul>
+                <li><a class="link sideBarClass" href="#" data-value='adResearchDivParentId'>Research Project</a></li>
+                <li><a class="link sideBarClass" data-value='confrenceAddDivId' href="#">Conference</a></li>
+                <li> <a class="link sideBarClass" data-value='symposiaAddDivId' href="#">Symposia</a></li>
+                <li> <a class="link sideBarClass" data-value='seminarAddDivId' href="#">Seminar</a></li>
+                <li> <a class="link sideBarClass" data-value='workshopAddDivId' href="#">Workshop</a></li>
+                <li> <a class="link sideBarClass" data-value='publicationsAddDivId' href="#">Publications</a></li>
+                <li> <a class="link sideBarClass" data-value='teacherbookAddDivId' href="#">Books</a></li>
+                <li> <a class="link sideBarClass" data-value='awardAddDivId' href="#">Academic Awards</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container divContainerParentDiv">
+        <div id='adResearchDivParentId' class="container box8">
+            <div class="row">
+                <div class="col-lg-7 col-md-7 col-6" id="imaged">
+                    <img src="../image/addresearch.jpg" style="height:29.7rem;width:100%;">
+                </div>
 
+                <div class="col-lg-5 col-md-5 col-6">
+                    <div style="margin-top: 30%;margin-left: 30px;">
+                        <div class="input-container-title8">
+                            <!-- <label for="rname">Enter title of project/programme of research project:</label> -->
+                            <input type="string" id="rtitle8" name="rname" placeholder="Title of Research project "><br>
+                        </div>
+                        <div class="input-container8">
+                            <!-- <label for="amt">Enter amount of rupees released:</label> -->
+                            <input type="string" id="amt8" name="amt" placeholder="Name of Funding Agency"><br>
+                        </div>
+                        <div class="input-container8">
+                            <!-- <label for="rname">Enter name of funding agency:</label> -->
+                            <input type="string" id="rname8" name="rname" placeholder="Amount released (in rupees)"><br>
+                        </div>
 
+                        <button class="btn8" id="researchAddSubmitButtonId">Add</button>
 
-   </nav>
-   <main class="main-content">
-      <button class="openSideNav"><i class="fa fa-navicon"></i></button>
-      <div id='adResearchDivParentId' style="display: none;">
-         <div class="box row">
-            <div class="column" id="imaged">
-                <img src="../image/addresearch.jpg" style="height:450px;width:470px; margin:70px 70px 70px 70px;">
-            </div>
-    
-            <div class="menu column">
-                <form>
-                    <!-- <div class="input-container">
-                <label for="doctype">Enter Teacher Id:</label>
-                <input type="string" id="doctype" name="teacherid" placeholder="Teacher Id"><br>
-            </div> -->
-                    <div class="input-container-title">
-                        <!-- <label for="rname">Enter title of project/programme of research project:</label> -->
-                        <input type="string" id="rtitle" name="rname" placeholder="Title of Research project "><br>
                     </div>
-                    <div class="input-container">
-                        <!-- <label for="amt">Enter amount of rupees released:</label> -->
-                        <input type="string" id="amt" name="amt" placeholder="Name of Funding Agency"><br>
-                    </div>
-                    <div class="input-container">
-                        <!-- <label for="rname">Enter name of funding agency:</label> -->
-                        <input type="string" id="rname" name="rname" placeholder="Amount released (in rupees)"><br>
-                    </div>
-    
-                    <button class="btn">Add</button>
-    
-                </form>
+                </div>
             </div>
         </div>
-      </div>
-      <div id='confrenceAddDivId' style="display: none;">
-         <form>
-            <!-- <div class="input-container">
-          <label for="doctype">Enter Teacher Id:</label>
-          <input type="string" id="doctype" name="teacherid" placeholder="Teacher Id"><br>
-      </div> -->
-            <!-- <div class="input-container"> -->
-            <!-- <label for="doctype">Enter Record Type:</label> -->
-            <!-- <select name="rtype" id="rtype">
-              <option hidden > Record Type </option>
-              <option value="conference" id="conference" >conference </option>
-              <option value="workshop"  id="workshop">workshop</option>
-              <option value="seminar" id="seminar">seminar</option>
-              <option value="symposia" id="symposia">symposia</option>
-         </select><br>
-      </div> -->
-            <div class="input-container">
-               <!-- <label for="doctype">Enter Record Nature:</label> -->
-               <select name="rnature" id="rnature" onchange="populate(this.id,'rtitle')">
-                  <option hidden>Nature of Conference</option>
-                  <option value="Organized" id="Organized">Organized</option>
-                  <option value="member" id="memeber">Chairperson/moderator/member</option>
-                  <option value="Participation" id="Participation">Participation </option>
-               </select><br>
-            </div>
-            <div class="input-container">
-               <!-- <label for="doctype">Enter Record Title:</label> -->
-               <select id="rtitle" name="rtitle">
-                  <option hidden>Title of Conference</option>
-               </select>
-            </div>
-            <div class="input-container">
-               <!-- <label for="doctype">Enter Record Place:</label> -->
-               <input type="string" id="rplace" name="recordplace" placeholder="Place of Conference"><br>
-            </div>
-            <div class="input-container">
-               <!-- <label for="doctype">Enter  Record date:</label> -->
-               <input type="date" id="rdate" name="recorddate" placeholder="Date  of Conference"
-                  style="width:380px"><br>
-            </div>
-            <div class="input-container">
-               <!-- <label for="doctype">Enter Record Details:</label> -->
-               <textarea type="string" id="rdetails" name="recorddetail"
-                  placeholder="Details  of Conference"></textarea><br>
-            </div>
-            <div class="input-container" id="filechoose">
-               <label for="fname">Upload your certificate:</label>
-               <input type="file" id="real-file" hidden="hidden" />
-               <button type="button" id="custom-button">Choose</button>
-               <span id="custom-text">No file choosen</span>
+        <div id='confrenceAddDivId' class="container box2" style="display: none;">
+            <div class="row">
+                <div class="col-lg-6 col-md-5 col-6" id="imaged">
+                    <img src="../image/addconf.png" style="height:29.7rem;width:100%;margin-top: 10%;">
+                </div>
 
-               <script type="text/javascript">
-                  const realFileBtn3 = document.getElementById("real-file");
-                  const customBtn3 = document.getElementById("custom-button");
-                  const customTxt3 = document.getElementById("custom-text");
+                <div class="col-lg-6 col-md-8 col-6">
+                    <div style="margin-left: 32%;margin-top: 15%;">
+                        <div class="input-container2">
+                            <!-- <label for="doctype">Enter Record Nature:</label> -->
+                            <select name="rnature" id="rnature2" onchange="populate(this.id,'rtitle2')">
+                                <option hidden>Nature of Conference</option>
+                                <option value="Organized" id="Organized">Organized</option>
+                                <option value="member" id="memeber">Chairperson/moderator/member</option>
+                                <option value="Participation" id="Participation">Participation </option>
+                            </select><br>
+                        </div>
+                        <div class="input-container2">
+                            <!-- <label for="doctype">Enter Record Title:</label> -->
+                            <select id="rtitle2" name="rtitle">
+                                <option hidden>Title of Conference</option>
+                            </select>
+                        </div>
+                        <div class="input-container2">
+                            <!-- <label for="doctype">Enter Record Place:</label> -->
+                            <input type="string" id="rplace2" name="recordplace" placeholder="Place of Conference"><br>
+                        </div>
+                        <div class="input-container2">
+                            <!-- <label for="doctype">Enter  Record date:</label> -->
+                            <input type="date" id="rdate2" name="recorddate" placeholder="Date  of Conference"
+                                style="width:380px"><br>
+                        </div>
+                        <div class="input-container2">
+                            <!-- <label for="doctype">Enter Record Details:</label> -->
+                            <textarea type="string" id="rdetails2" name="recorddetail"
+                                placeholder="Details  of Conference"></textarea><br>
+                        </div>
+                        <div class="input-container2" id="filechoose2">
+                            <label for="fname">Upload your certificate:</label>
+                            <input type="file" id="real-file2" hidden="hidden" />
+                            <button type="button" id="custom-button2">Choose</button>
+                            <span id="custom-text2">No file choosen</span>
 
-                  customBtn3.addEventListener("click", function () {
-                     realFileBtn3.click();
-                  });
+                            <script type="text/javascript">
+                                const realFileBtn3 = document.getElementById("real-file2");
+                                const customBtn3 = document.getElementById("custom-button2");
+                                const customTxt3 = document.getElementById("custom-text2");
+                                customBtn3.addEventListener("click", function () {
+                                    realFileBtn3.click();
+                                });
+                                realFileBtn3.addEventListener("change", function () {
+                                    if (realFileBtn3.value) {
+                                        customTxt3.innerHTML = realFileBtn3.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+                                    }
+                                    else
+                                        customTxt3.innerHTML = "No file choosen";
+                                })
+                            </script>
+                        </div>
 
-                  realFileBtn3.addEventListener("change", function () {
-                     if (realFileBtn3.value) {
-                        customTxt3.innerHTML = realFileBtn3.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
-                     }
-                     else
-                        customTxt3.innerHTML = "No file choosen";
-                  })
-               </script>
+                        <button class="btn2"  id="conferenceAddSubmitButtonId">Add</button>
+
+                    </div>
+                </div>
             </div>
+        </div>
+        <div id='publicationsAddDivId' class="container box7" style="display: none;">
+            <div class="row">
+                <div class="col-lg-6 col-md-5 col-6" id="imaged">
+                    <img src="../image/addpub.jpg"
+                        style="height:29.7rem;width:100%;margin-top: 35px;margin-left: 10%;">
+                </div>
 
-            <button class="btn">Add</button>
+                <div class="col-lg-6 col-md-7 col-6">
+                    <div style="margin-top: 150px;margin-left: 25%;">
+                        <div class="input-container7">
+                            <!-- <label for="jnature">Enter Journal nature:</label> -->
+                            <select name="jnature">
+                                <option hidden>Nature of Journal</option>
+                                <option value="A1" size=90>A1 Journal</option>
+                                <option value="A2" size=90>A2 Journal</option>
+                                <option value="B" size=90>B Journal</option>
+                                <option value="C" size=90>C Journal</option>
+                                <option value="O" size=90>Non referred Journal/conference proceedings
+                                </option>
+                            </select><br>
+                        </div>
+                        <div class="input-container7">
+                            <!-- <label for="jtitle">Enter Journal title:</label> -->
+                            <input type="string" id="jtitle7" name="jtitle" placeholder="Title of Journal"><br>
+                        </div>
+                        <div class="input-container7">
+                            <!-- <label for="jname">Enter Journal Name:</label> -->
+                            <input type="string" id="jname7" name="jname" placeholder="Name of Journal"><br>
+                        </div>
+                        <div class="input-container7">
+                            <!-- <label for="jdate">Enter Date of acceptance:</label> -->
+                            <input type="date" id="jdate7" name="jdate" placeholder="Date of acceptance"><br>
+                        </div>
+                        <button class="btn7"  id="publicationsAddSubmitButtonId">Add</button>
 
-         </form>
-      </div>
-      <div id="publicationsAddDivId" style="display: none;">
-         <form>
-            <!-- <div class="input-container">
-          <label for="doctype">Enter Teacher ID:</label>
-          <input type="string" id="doctype" name="doctype" placeholder="Teacher ID"><br>
-      </div> -->
-            <div class="input-container">
-               <!-- <label for="jnature">Enter Journal nature:</label> -->
-               <select name="jnature">
-                  <option hidden>Nature of Journal</option>
-                  <option value="A1" size=90>A1 Journal</option>
-                  <option value="A2" size=90>A2 Journal</option>
-                  <option value="B" size=90>B Journal</option>
-                  <option value="C" size=90>C Journal</option>
-                  <option value="O" size=90>Non referred Journal/conference proceedings</option>
-               </select><br>
+                    </div>
+                </div>
             </div>
-            <div class="input-container">
-               <!-- <label for="jtitle">Enter Journal title:</label> -->
-               <input type="string" id="jtitle" name="jtitle" placeholder="Title of Journal"><br>
-            </div>
-            <div class="input-container">
-               <!-- <label for="jname">Enter Journal Name:</label> -->
-               <input type="string" id="jname" name="jname" placeholder="Name of Journal"><br>
-            </div>
-            <div class="input-container">
-               <!-- <label for="jdate">Enter Date of acceptance:</label> -->
-               <input type="date" id="jdate" name="jdate" placeholder="Date of acceptance"><br>
-            </div>
-            <button class="btn">Add</button>
+        </div>
+        <div id='seminarAddDivId' class="container box5" style="display: none;">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-6" id="imaged">
+                    <img src="../image/addseminar.jpg" style="height:29.7rem;width:100%;margin-top: 40px;">
+                </div>
 
-         </form>
-      </div>
-      <div id='seminarAddDivId' style="display: none;">
-         <form>
-            <!-- <div class="input-container">
-          <label for="doctype">Enter Teacher Id:</label>
-          <input type="string" id="doctype" name="teacherid" placeholder="Teacher Id"><br>
-      </div> -->
-            <!-- <div class="input-container"> -->
-            <!-- <label for="doctype">Enter Record Type:</label> -->
-            <!-- <select name="rtype" id="rtype">
-              <option hidden > Record Type </option>
-              <option value="conference" id="conference" >conference </option>
-              <option value="workshop"  id="workshop">workshop</option>
-              <option value="seminar" id="seminar">seminar</option>
-              <option value="symposia" id="symposia">symposia</option>
-         </select><br>
-      </div> -->
-            <div class="input-container">
-               <!-- <label for="doctype">Enter Record Nature:</label> -->
-               <select name="rnature" id="rnature" onchange="populate(this.id,'rtitle')">
-                  <option hidden>Nature of Seminar</option>
-                  <option value="Organized" id="Organized">Organized</option>
-                  <option value="member" id="memeber">Chairperson/moderator/member</option>
-                  <option value="Participation" id="Participation">Participation </option>
-               </select><br>
+                <div class="col-lg-5 col-md-6 col-6">
+                    <div style="margin-left: 70px; margin-top: 55px;">
+                        <div class="input-container5">
+                            <!-- <label for="doctype">Enter Record Nature:</label> -->
+                            <select name="rnature" id="rnature5" onchange="populate(this.id,'rtitle5')">
+                                <option hidden>Nature of Seminar</option>
+                                <option value="Organized" id="Organized">Organized</option>
+                                <option value="member" id="memeber">
+                                    Chairperson/moderator/member</option>
+                                <option value="Participation" id="Participation">
+                                    Participation </option>
+                            </select><br>
+                        </div>
+                        <div class="input-container5">
+                            <!-- <label for="doctype">Enter Record Title:</label> -->
+                            <select id="rtitle5" name="rtitle">
+                                <option hidden>Title of Seminar</option>
+                            </select>
+                        </div>
+                        <div class="input-container5">
+                            <!-- <label for="doctype">Enter Record Place:</label> -->
+                            <input type="string" id="rplace5" name="recordplace" placeholder="Place of Seminar"><br>
+                        </div>
+                        <div class="input-container5">
+                            <!-- <label for="doctype">Enter  Record date:</label> -->
+                            <input type="date" id="rdate5" name="recorddate" placeholder="Date of Seminar"
+                                style="width:380px"><br>
+                        </div>
+                        <div class="input-container5">
+                            <!-- <label for="doctype">Enter Record Details:</label> -->
+                            <textarea type="string" id="rdetails5" name="recorddetail"
+                                placeholder="Details of Seminar"></textarea><br>
+                        </div>
+                        <div class="input-container5" id="filechoose5">
+                            <label for="fname">Upload your certificate:</label>
+                            <input type="file" id="real-file5" hidden="hidden" />
+                            <button type="button" id="custom-button5">Choose</button>
+                            <span id="custom-text5">No file choosen</span>
+
+                            <script type="text/javascript">
+                                const realFileBtn = document.getElementById("real-file5");
+                                const customBtn = document.getElementById("custom-button5");
+                                const customTxt = document.getElementById("custom-text5");
+                                customBtn.addEventListener("click", function () {
+                                    realFileBtn.click();
+                                });
+                                realFileBtn.addEventListener("change", function () {
+                                    if (realFileBtn.value) {
+                                        customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+                                    }
+                                    else
+                                        customTxt.innerHTML = "No file choosen";
+                                })
+                            </script>
+                        </div>
+
+                        <button class="btn5"  id="seminarAddSubmitButtonId">Add</button>
+
+                    </div>
+                </div>
             </div>
-            <div class="input-container">
-               <!-- <label for="doctype">Enter Record Title:</label> -->
-               <select id="rtitle" name="rtitle">
-                  <option hidden>Title of Seminar</option>
-               </select>
+        </div>
+        <div id='symposiaAddDivId' class="container box3" style="display: none;">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-6" id="imaged">
+                    <img src="../image/symposia.jpg" style="height:29.7rem;width:100%;">
+                </div>
+
+                <div class="col-lg-5 col-md-6 col-6">
+                    <div style="margin-left: 17%;margin-top: 60px;">
+                        <div class="input-container3">
+                            <!-- <label for="doctype">Enter Record Nature:</label> -->
+                            <select name="rnature" id="rnature3" onchange="populate(this.id,'rtitle3')">
+                                <option hidden>Nature of Symposia</option>
+                                <option value="Organized" id="Organized">
+                                    Organized</option>
+                                <option value="member" id="memeber">
+                                    Chairperson/moderator/member</option>
+                                <option value="Participation" id="Participation">
+                                    Participation
+                                </option>
+                            </select><br>
+                        </div>
+                        <div class="input-container3">
+                            <!-- <label for="doctype">Enter Record Title:</label> -->
+                            <select id="rtitle3" name="rtitle">
+                                <option hidden>Title of Symposia</option>
+                            </select>
+                        </div>
+                        <div class="input-container3">
+                            <!-- <label for="doctype">Enter Record Place:</label> -->
+                            <input type="string" id="rplace3" name="recordplace" placeholder="Place of Symposia"><br>
+                        </div>
+                        <div class="input-container3">
+                            <!-- <label for="doctype">Enter  Record date:</label> -->
+                            <input type="date" id="rdate3" name="recorddate" placeholder="Date of Symposia"
+                                style="width:380px"><br>
+                        </div>
+                        <div class="input-container3">
+                            <!-- <label for="doctype">Enter Record Details:</label> -->
+                            <textarea type="string" id="rdetails3" name="recorddetail"
+                                placeholder="Details of Symposia"></textarea><br>
+                        </div>
+                        <div class="input-container3" id="filechoose3">
+                            <label for="fname">Upload your
+                                certificate:</label>
+                            <input type="file" id="real-file3" hidden="hidden" />
+                            <button type="button" id="custom-button3">Choose</button>
+                            <span id="custom-text3">No file choosen</span>
+
+                            <script type="text/javascript">
+                                const realFileBtn1 = document.getElementById("real-file3");
+                                const customBtn1 = document.getElementById("custom-button3");
+                                const customTxt1 = document.getElementById("custom-text3");
+                                customBtn1.addEventListener("click", function () {
+                                    realFileBtn1.click();
+                                });
+                                realFileBtn1.addEventListener("change", function () {
+                                    if (realFileBtn1.value) {
+                                        customTxt1.innerHTML = realFileBtn1.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+                                    }
+                                    else
+                                        customTxt1.innerHTML = "No file choosen";
+                                })
+                            </script>
+                        </div>
+
+                        <button class="btn3"  id="symposiaAddSubmitButtonId">Add</button>
+
+                    </div>
+                </div>
             </div>
-            <div class="input-container">
-               <!-- <label for="doctype">Enter Record Place:</label> -->
-               <input type="string" id="rplace" name="recordplace" placeholder="Place of Seminar"><br>
+        </div>
+        <div id='workshopAddDivId' class="container box6" style="display: none;">
+            <div class="row">
+                <div class="col-lg-6 col-md-5 col-6" id="imaged">
+                    <img src="../image/workshop.png" style="height:29.7rem;width:100%; margin-top: 10%;">
+                </div>
+
+                <div class="col-lg-6 col-md-7 col-6">
+                    <div style="margin-left: 32%;margin-top: 10%;">
+                        <div class="input-container6">
+                            <!-- <label for="doctype">Enter Record Nature:</label> -->
+                            <select name="rnature" id="rnature6" onchange="populate(this.id,'rtitle6')">
+                                <option hidden>Nature of
+                                    Workshop</option>
+                                <option value="Organized" id="Organized">
+                                    Organized
+                                </option>
+                                <option value="member" id="memeber">
+                                    Chairperson/moderator/member
+                                </option>
+                                <option value="Participation" id="Participation">
+                                    Participation </option>
+                            </select><br>
+                        </div>
+                        <div class="input-container6">
+                            <!-- <label for="doctype">Enter Record Title:</label> -->
+                            <select id="rtitle6" name="rtitle">
+                                <option hidden>Title of
+                                    Workshop</option>
+                            </select>
+                        </div>
+                        <div class="input-container6">
+                            <!-- <label for="doctype">Enter Record Place:</label> -->
+                            <input type="string" id="rplace6" name="recordplace" placeholder="Place of Workshop"><br>
+                        </div>
+                        <div class="input-container6">
+                            <!-- <label for="doctype">Enter  Record date:</label> -->
+                            <input type="date" id="rdate6" name="recorddate" placeholder="Date of Workshop"
+                                style="width:380px"><br>
+                        </div>
+                        <div class="input-container6">
+                            <!-- <label for="doctype">Enter Record Details:</label> -->
+                            <textarea type="string" id="rdetails6" name="recorddetail"
+                                placeholder="Details of Workshop"></textarea><br>
+                        </div>
+                        <div class="input-container6" id="filechoose6">
+                            <label for="fname">Upload your
+                                certificate:</label>
+                            <input type="file" id="real-file6" hidden="hidden" />
+                            <button type="button" id="custom-button6">Choose</button>
+                            <span id="custom-text6">No file
+                                choosen</span>
+
+                            <script type="text/javascript">
+                                const realFileBtn2 = document.getElementById("real-file6");
+                                const customBtn2 = document.getElementById("custom-button6");
+                                const customTxt2 = document.getElementById("custom-text6");
+                                customBtn2.addEventListener("click", function () {
+                                    realFileBtn2.click();
+                                });
+                                realFileBtn2.addEventListener("change", function () {
+                                    if (realFileBtn2.value) {
+                                        customTxt2.innerHTML = realFileBtn2.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+                                    }
+                                    else
+                                        customTxt2.innerHTML = "No file choosen";
+                                })
+                            </script>
+                        </div>
+
+                        <button class="btn6"  id="workshopAddSubmitButtonId">Add</button>
+
+                    </div>
+                </div>
             </div>
-            <div class="input-container">
-               <!-- <label for="doctype">Enter  Record date:</label> -->
-               <input type="date" id="rdate" name="recorddate" placeholder="Date of Seminar" style="width:380px"><br>
+        </div>
+        <div id='teacherbookAddDivId' class="container box4" style="display: none;">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-6" id="imaged">
+                    <img src="../image/addbooks.jpg" style="height:29.7rem;width:100%;margin-top: 7%;">
+                </div>
+
+                <div class="col-lg-5 col-md-6 col-6">
+                    <div style="margin-top: 25%;margin-left: 20%;">
+                        <div class="input-container4">
+                            <!-- <label for="btype">Enter book type</label> -->
+                            <select name="btype" id="btype4">
+                                <option hidden>
+                                    Book
+                                    Type
+                                </option>
+                                <option value="Text" size=90>
+                                    Text
+                                    book
+                                </option>
+                                <option value="Technical" size=90>
+                                    Technical
+                                    Book
+                                </option>
+                                <option value="Editedv" size=90>
+                                    Edited
+                                    Volumes
+                                </option>
+                                <option value="EditedB" size=90>
+                                    Edited
+                                    books
+                                </option>
+                                <option value="Chap" size=90>
+                                    chapters
+                                    in the
+                                    book
+                                </option>
+                                <option value="Book" size=90>
+                                    book
+                                    review
+                                </option>
+                            </select><br>
+                        </div>
+                        <div class="input-container4">
+                            <!-- <label for="bname">Enter title of Book:</label> -->
+                            <input type="string" id="bname4" name="bname" placeholder="Book title"><br>
+                        </div>
+                        <div class="input-container4">
+                            <!-- <label for="bauthor">Enter author name:</label> -->
+                            <input type="string" id="bauthor4" name="bauthor" placeholder="Book author name"><br>
+                        </div>
+                        <div class="input-container4">
+                            <!-- <label for="bpub">Enter publisher name:</label> -->
+                            <input type="string" id="bpub4" name="bpub" placeholder="Book publisher name"><br>
+                        </div>
+                        <div class="input-container4">
+                            <!-- <label for="bdate">Enter date of publication:</label> -->
+                            <input type="date" id="bdate4" name="bdate" placeholder="Date of publication"><br>
+                        </div>
+                        <button class="btn4"  id="bookAddSubmitButtonId">Add</button>
+                    </div>
+                </div>
             </div>
-            <div class="input-container">
-               <!-- <label for="doctype">Enter Record Details:</label> -->
-               <textarea type="string" id="rdetails" name="recorddetail"
-                  placeholder="Details of Seminar"></textarea><br>
+        </div>
+        <div id='awardAddDivId' class="container box1" style="display: none;">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-6" id="imaged">
+                    <img src="../image/addaward.jpg" style="height:29.7rem;width:100%;margin-top: 7%;">
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-6">
+                    <div style="margin-top: 25%; margin-left: 10%;">
+                        <div class="input-container1">
+                            <!-- <label for="aname">Enter award title:</label> -->
+                            <select name="atitle" id="atitle1">
+                                <option hidden>
+                                    Title
+                                    of
+                                    Academic
+                                    Award
+                                </option>
+                                <option value="Text" size=90>
+                                    International
+                                </option>
+                                <option value="Technical" size=90>
+                                    National
+                                </option>
+                                <option value="Editedv" size=90>
+                                    State
+                                </option>
+                            </select><br>
+                        </div>
+                        <div class="input-container1">
+                            <!-- <label for="adate">Enter date of award:</label>    -->
+                            <input type="date" id="adate1" name="adate" placeholder="Date of award"><br>
+                        </div>
+                        <div class="input-container1">
+                            <!-- <label for="adetails">Enter award details:</label><br> -->
+                            <textarea type="string" id="adetails1" name="adetails"
+                                placeholder="Details of Award"></textarea><br>
+                        </div>
+                        <button class="btn1"  id="awardAddSubmitButtonId">Add</button>
+                    </div>
+                </div>
             </div>
-            <div class="input-container" id="filechoose">
-               <label for="fname">Upload your certificate:</label>
-               <input type="file" id="real-file" hidden="hidden" />
-               <button type="button" id="custom-button">Choose</button>
-               <span id="custom-text">No file choosen</span>
-
-               <script type="text/javascript">
-                  const realFileBtn = document.getElementById("real-file");
-                  const customBtn = document.getElementById("custom-button");
-                  const customTxt = document.getElementById("custom-text");
-
-                  customBtn.addEventListener("click", function () {
-                     realFileBtn.click();
-                  });
-
-                  realFileBtn.addEventListener("change", function () {
-                     if (realFileBtn.value) {
-                        customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
-                     }
-                     else
-                        customTxt.innerHTML = "No file choosen";
-                  })
-               </script>
-            </div>
-
-            <button class="btn">Add</button>
-
-         </form>
-      </div>
-      <div id="symposiaAddDivId" style="display: none;">
-         <form>
-            <!-- <div class="input-container">
-          <label for="doctype">Enter Teacher Id:</label>
-          <input type="string" id="doctype" name="teacherid" placeholder="Teacher Id"><br>
-      </div> -->
-            <!-- <div class="input-container"> -->
-            <!-- <label for="doctype">Enter Record Type:</label> -->
-            <!-- <select name="rtype" id="rtype">
-              <option hidden > Record Type </option>
-              <option value="conference" id="conference" >conference </option>
-              <option value="workshop"  id="workshop">workshop</option>
-              <option value="seminar" id="seminar">seminar</option>
-              <option value="symposia" id="symposia">symposia</option>
-         </select><br>
-      </div> -->
-            <div class="input-container">
-               <!-- <label for="doctype">Enter Record Nature:</label> -->
-               <select name="rnature" id="rnature" onchange="populate(this.id,'rtitle')">
-                  <option hidden>Nature of Symposia</option>
-                  <option value="Organized" id="Organized">Organized</option>
-                  <option value="member" id="memeber">Chairperson/moderator/member</option>
-                  <option value="Participation" id="Participation">Participation </option>
-               </select><br>
-            </div>
-            <div class="input-container">
-               <!-- <label for="doctype">Enter Record Title:</label> -->
-               <select id="rtitle" name="rtitle">
-                  <option hidden>Title of Symposia</option>
-               </select>
-            </div>
-            <div class="input-container">
-               <!-- <label for="doctype">Enter Record Place:</label> -->
-               <input type="string" id="rplace" name="recordplace" placeholder="Place of Symposia"><br>
-            </div>
-            <div class="input-container">
-               <!-- <label for="doctype">Enter  Record date:</label> -->
-               <input type="date" id="rdate" name="recorddate" placeholder="Date of Symposia" style="width:380px"><br>
-            </div>
-            <div class="input-container">
-               <!-- <label for="doctype">Enter Record Details:</label> -->
-               <textarea type="string" id="rdetails" name="recorddetail"
-                  placeholder="Details of Symposia"></textarea><br>
-            </div>
-            <div class="input-container" id="filechoose">
-               <label for="fname">Upload your certificate:</label>
-               <input type="file" id="real-file" hidden="hidden" />
-               <button type="button" id="custom-button">Choose</button>
-               <span id="custom-text">No file choosen</span>
-
-               <script type="text/javascript">
-                  const realFileBtn1 = document.getElementById("real-file");
-                  const customBtn1 = document.getElementById("custom-button");
-                  const customTxt1 = document.getElementById("custom-text");
-
-                  customBtn1.addEventListener("click", function () {
-                     realFileBtn1.click();
-                  });
-
-                  realFileBtn1.addEventListener("change", function () {
-                     if (realFileBtn1.value) {
-                        customTxt1.innerHTML = realFileBtn1.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
-                     }
-                     else
-                        customTxt1.innerHTML = "No file choosen";
-                  })
-               </script>
-            </div>
-
-            <button class="btn">Add</button>
-
-         </form>
-      </div>
-      <div id="workshopAddDivId" style="display: none;">
-         <form>
-            <!-- <div class="input-container">
-          <label for="doctype">Enter Teacher Id:</label>
-          <input type="string" id="doctype" name="teacherid" placeholder="Teacher Id"><br>
-      </div> -->
-            <!-- <div class="input-container"> -->
-            <!-- <label for="doctype">Enter Record Type:</label> -->
-            <!-- <select name="rtype" id="rtype">
-              <option hidden > Record Type </option>
-              <option value="conference" id="conference" >conference </option>
-              <option value="workshop"  id="workshop">workshop</option>
-              <option value="seminar" id="seminar">seminar</option>
-              <option value="symposia" id="symposia">symposia</option>
-         </select><br>
-      </div> -->
-            <div class="input-container">
-               <!-- <label for="doctype">Enter Record Nature:</label> -->
-               <select name="rnature" id="rnature" onchange="populate(this.id,'rtitle')">
-                  <option hidden>Nature of Workshop</option>
-                  <option value="Organized" id="Organized">Organized</option>
-                  <option value="member" id="memeber">Chairperson/moderator/member</option>
-                  <option value="Participation" id="Participation">Participation </option>
-               </select><br>
-            </div>
-            <div class="input-container">
-               <!-- <label for="doctype">Enter Record Title:</label> -->
-               <select id="rtitle" name="rtitle">
-                  <option hidden>Title of Workshop</option>
-               </select>
-            </div>
-            <div class="input-container">
-               <!-- <label for="doctype">Enter Record Place:</label> -->
-               <input type="string" id="rplace" name="recordplace" placeholder="Place of Workshop"><br>
-            </div>
-            <div class="input-container">
-               <!-- <label for="doctype">Enter  Record date:</label> -->
-               <input type="date" id="rdate" name="recorddate" placeholder="Date of Workshop" style="width:380px"><br>
-            </div>
-            <div class="input-container">
-               <!-- <label for="doctype">Enter Record Details:</label> -->
-               <textarea type="string" id="rdetails" name="recorddetail"
-                  placeholder="Details of Workshop"></textarea><br>
-            </div>
-            <div class="input-container" id="filechoose">
-               <label for="fname">Upload your certificate:</label>
-               <input type="file" id="real-file" hidden="hidden" />
-               <button type="button" id="custom-button">Choose</button>
-               <span id="custom-text">No file choosen</span>
-
-               <script type="text/javascript">
-                  const realFileBtn2 = document.getElementById("real-file");
-                  const customBtn2 = document.getElementById("custom-button");
-                  const customTxt2 = document.getElementById("custom-text");
-
-                  customBtn2.addEventListener("click", function () {
-                     realFileBtn2.click();
-                  });
-
-                  realFileBtn2.addEventListener("change", function () {
-                     if (realFileBtn2.value) {
-                        customTxt2.innerHTML = realFileBtn2.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
-                     }
-                     else
-                        customTxt2.innerHTML = "No file choosen";
-                  })
-               </script>
-            </div>
-
-            <button class="btn">Add</button>
-
-         </form>
-      </div>
-      <div id="teacherbookAddDivId" style="display: none;">
-         <form>
-
-            <!-- <div class="input-container">
-          <label for="rname">Enter teacher id:</label>
-          <input type="string" id="rname" name="rname" placeholder="Teacher id"><br>
-      </div> -->
-            <div class="input-container">
-               <!-- <label for="btype">Enter book type</label> -->
-               <select name="btype" id="btype">
-                  <option hidden> Book Type </option>
-                  <option value="Text" size=90>Text book </option>
-                  <option value="Technical" size=90>Technical Book</option>
-                  <option value="Editedv" size=90>Edited Volumes</option>
-                  <option value="EditedB" size=90>Edited books</option>
-                  <option value="Chap" size=90>chapters in the book</option>
-                  <option value="Book" size=90>book review</option>
-               </select><br>
-            </div>
-            <div class="input-container">
-               <!-- <label for="bname">Enter title of Book:</label> -->
-               <input type="string" id="bname" name="bname" placeholder="Book title"><br>
-            </div>
-            <div class="input-container">
-               <!-- <label for="bauthor">Enter author name:</label> -->
-               <input type="string" id="bauthor" name="bauthor" placeholder="Book author name"><br>
-
-
-            </div>
-            <div class="input-container">
-               <!-- <label for="bpub">Enter publisher name:</label> -->
-               <input type="string" id="bpub" name="bpub" placeholder="Book publisher name"><br>
-
-
-            </div>
-            <div class="input-container">
-               <!-- <label for="bdate">Enter date of publication:</label> -->
-               <input type="date" id="bdate" name="bdate" placeholder="Date of publication"><br>
-
-
-            </div>
-            <button class="btn">Add</button>
-
-
-
-         </form>
-      </div>
-      <div id="awardAddDivId" style="display: none;">
-         <form>
-            <!-- <div class="input-container">
-          <label for="teachid">Enter Teacher id:</label>
-          <input type="string" id="teachid" name="teachid" placeholder="Teacher ID"><br>
-      </div> -->
-            <div class="input-container">
-               <!-- <label for="aname">Enter award title:</label> -->
-               <select name="atitle" id="atitle">
-                  <option hidden>Title of Academic Award</option>
-                  <option value="Text" size=90>International </option>
-                  <option value="Technical" size=90>National</option>
-                  <option value="Editedv" size=90>State</option>
-               </select><br>
-            </div>
-            <div class="input-container">
-               <!-- <label for="adate">Enter date of award:</label>    -->
-               <input type="date" id="adate" name="adate" placeholder="Date of award"><br>
-            </div>
-            <div class="input-container">
-               <!-- <label for="adetails">Enter award details:</label><br> -->
-               <textarea type="string" id="adetails" name="adetails" placeholder="Details of Award"></textarea><br>
-            </div>
-            <button class="btn">Add</button>
-
-         </form>
-      </div>
-   </main>
-   <script>
-      let openBtn = document.querySelector(".openSideNav");
-      openBtn.addEventListener("click", () => {
-         showNav();
-      });
-      let closeBtn = document.querySelector(".closeBtn");
-      closeBtn.addEventListener("click", () => {
-         hideNav();
-      });
-      function showNav() {
-         document.querySelector(".sideNav").style.width = "300px";
-         document.querySelector('.main-content').style.marginLeft = "300px";
-      }
-      function hideNav() {
-         document.querySelector(".sideNav").style.width = "0";
-         document.querySelector('.main-content').style.marginLeft = "0px";
-      }
-   </script>
-   <script src="../js/trecords.js"></script>
-
+        </div>
+    </div>
+    <script src="../js/trecords.js"></script>
+    <script src="../js/conference.js"></script>
+    <script src="../js/checkTeacher.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/endpoints.js"></script>
 </body>
 
 </html>

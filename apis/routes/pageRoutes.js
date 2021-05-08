@@ -84,6 +84,10 @@ router.get('/workshop',(req,res)=>{
     res.render('workshop');
 })
 
+router.get("/teacher_view",(req,res)=>{
+    res.render('teacher_view');
+})
+
 router.get("/depart",(req,res)=>{
     res.render('depart');
 })

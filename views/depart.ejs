@@ -16,6 +16,7 @@
         if (!token && token.length == 0) {
             window.location.href = "/"
         } 
+
     </script>
 </head>
 <body>
@@ -24,7 +25,7 @@
             <li class="menu"><a href="#" > <img id="userimg" src="../image/user.png" alt="user"> Departmental User </a>
                 <ul>
                     <li> <a href="/departmenteditprofile" > View profile </a> </li>
-                    <li> <a href="#" > Logout </a> </li>
+                    <li> <a id="LogoutDepartmentId" onclick="logout()"> Logout </a> </li>
                 </ul>
             </li>
         </ul>
@@ -45,7 +46,7 @@
         </a>
     </div>
     <div id="options2">
-        <a href="#">
+        <a href="/teacher_view">
         <div class="box"id="box-2">
             <h2 id="secondary">View Teacher List</h2>
             <img src="../image/viewt.png" alt="Teacher" height="50%">
@@ -67,5 +68,6 @@
     <script src="../js/checkDepart.js"></script>
     <script src="../js/ajax.js"></script>
 	<script src="../js/endpoints.js"></script>
+    <script src="../js/comman.js"></script>
 </body>
 </html>

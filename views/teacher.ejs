@@ -4,9 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doc Hub</title>
     <link href="../CSS/style4.css" rel="stylesheet">
+    <script>
+        let token = localStorage.getItem("TOKEN");
+        if (!token && token.length == 0) {
+            window.location.href = "/"
+        } 
+    </script>
 </head>
 <body>
     <div>
@@ -14,7 +23,7 @@
             <li class="menu"><a href="#" > <img id="userimg" src="../image/user.png" alt="user"> Teacher </a>
                 <ul>
                     <li> <a href="/finaleditprofile" > View profile </a> </li>
-                    <li> <a href="#" > Logout </a> </li>
+                    <li> <a href="#" onclick="logout()" > Logout </a> </li>
                 </ul>
             </li>
         </ul>
@@ -48,5 +57,9 @@
             </div>
             </a>
         </div>
+        <script src="../js/checkTeacher.js"></script>
+        <script src="../js/ajax.js"></script>
+        <script src="../js/endpoints.js"></script>
+        <script src="../js/comman.js"></script>
     </body>
 </html>

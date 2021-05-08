@@ -88,6 +88,7 @@ passport.use(
             if(token){
                 let email = token.user;
                 let depart = token.department;
+                let teach = token.teacher;
                 console.log(email,depart);
                 if(email){
                     let user = await User.findOne({email:email});
@@ -97,6 +98,11 @@ passport.use(
                     let department = await Department.findOne({department_id:depart});
                     console.log(department);
                     done(null,department);
+                }
+                else if(teach){
+                    let teacher = await Teacher.findOne({teacher_id:teach});
+                    teacher.department_id = null;
+                    done(null,teacher);
                 }
             }
             else{
@@ -213,6 +219,42 @@ passport.use(
                             delete teacher.teacher_password;
                             return done(null, teacher, { message: 'Teacher Account Created' });
                         })
+                    }
+                })
+            }
+            catch (err) {
+                done(err);
+            }
+        }
+    )
+)
+
+
+passport.use(
+    'teacherSignIn',
+    new LocalStrategy({
+        usernameField: 'teacher_id',
+        passwordField: 'teacher_password',
+        passReqToCallback: true,
+        session: false
+    },
+        async function (req, teacher_id, teacher_password, done) {
+            const userData = req.body;
+            try {
+                Teacher.findOne({ teacher_id: teacher_id }).then(async(teacher) =>{
+                    if (!teacher) {
+                        return done(null, false, { message: 'teacher account does not exist' });
+                    }
+                    else{
+                        teacher.isPasswordValid(teacher_password).then((validate)=>{
+                            console.log(validate,'value of validate');
+                            if (!validate) {
+                                return done(null, false, { message: 'Wrong Password' });
+                              }
+                              delete teacher.teacher_password;
+                              return done(null, teacher, { message: 'Logged in Successfully' });
+                        });
+                       
                     }
                 })
             }
