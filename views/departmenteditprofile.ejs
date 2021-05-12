@@ -4,6 +4,9 @@
     <title>Title</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+        <!-- Required meta tags -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="../js/checkDepart.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
@@ -13,13 +16,12 @@
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <div class="container rounded bg-white mt-5 mb-5">
         <div class="row">
             <div class="col-md-3 border-right">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" src="../image/unnamed.png"><span class="font-weight-bold">AIM & ACT</span><span class="text-black-50">aim_act4545@gmail.com</span><span> </span></div>
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" src="../image/unnamed.png"><span class="font-weight-bold" id="sideNameProfile">AIM & ACT</span><span class="text-black-50" id="sideEmailProfile">aim_act4545@gmail.com</span><span> </span></div>
             </div>
             <div class="col-md-5 border-right">
                 <div class="p-3 py-5">
@@ -27,22 +29,29 @@
                         <h4 class="text-right">Profile Settings</h4>
                     </div>
                     <div class="row mt-2">
-                        <div class="col-md-12"><label class="labels">Department Name</label><input type="text" class="form-control" placeholder="Department Name" value=""></div>
+                        <div class="col-md-12"><label class="labels">Department Name</label>
+                            <input type="text" id="dName" class="form-control" placeholder="Department Name" value=""></div>
                        </div>
                     <div class="row mt-3">
-                        <div class="col-md-12"><label class="labels">PhoneNumber</label><input type="text" class="form-control" placeholder="enter phone number" value=""></div>
-                        <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" placeholder="enter email id" value=""></div>
+                        <div class="col-md-12"><label class="labels">PhoneNumber</label>
+                            <input type="text"  id="dNumber" class="form-control" placeholder="enter phone number" value=""></div>
+                        <div class="col-md-12"><label class="labels">Email ID</label>
+                            <input type="text" id="dEmail" class="form-control" disabled placeholder="enter email id" value=""></div>
                        </div>
                     <div class="row mt-3">
-                        <div class="col-md-12"><label class="labels">City</label><input type="text" class="form-control" placeholder="country" value=""></div>
-                        <div class="col-md-12"><label class="labels">Pin Code</label><input type="text" class="form-control" value="" placeholder="state"></div>
+                        <div class="col-md-12"><label class="labels">City</label>
+                            <input type="text"  id="dCity" class="form-control" placeholder="country" value=""></div>
+                        <div class="col-md-12"><label class="labels">Pin Code</label>
+                            <input type="text"  id="dPin" class="form-control" value="" placeholder="state"></div>
                     </div>
                     <div class="row mt-3">
-                        <div class="col-md-12"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country" value=""></div>
-                        <div class="col-md-12"><label class="labels">State/Region</label><input type="text" class="form-control" value="" placeholder="state"></div>
+                        <div class="col-md-12"><label class="labels">Country</label>
+                            <input type="text"  id="dCountry" class="form-control" placeholder="country" value=""></div>
+                        <div class="col-md-12"><label class="labels">State/Region</label>
+                            <input type="text"  id="dState" class="form-control" value="" placeholder="state"></div>
                     </div>
                     <br> <br>
-                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+                    <div class="mt-5 text-center"><button  id="dSubmitDetailsButton" class="btn btn-primary profile-button" type="button">Save Profile</button></div>
                 </div>
             </div>
             <div class="col-md-4">
@@ -59,7 +68,12 @@
                 </div>
             </div>
         </div>
-    </div>  
+    </div> 
+    
+    
+    <script src="../js/departmenteditprofile.js"></script>
+	<script src="../js/ajax.js"></script>
+	<script src="../js/endpoints.js"></script>
 
 </body>
 </html>

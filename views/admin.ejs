@@ -11,13 +11,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doc Hub</title>
     <link href="../CSS/style2.css" rel="stylesheet">
+    <script>
+        let token = localStorage.getItem("TOKEN");
+        if (!token && token.length == 0) {
+            window.location.href = "/"
+        } 
+    </script>
 </head>
 <body>
     <div>
         <ul class="Nav2">
             <li class="menu"><a href="#" > <img id="userimg" src="../image/user.png" alt="user"> Admin </a>
                 <ul>
-                    <li> <a href="/finaleditprofile" > View profile </a> </li>
+                    <li> <a href="/finaleditprofile"> View profile </a> </li>
                     <li> <a href="" onclick="logout()" > Logout </a> </li>
                 </ul>
             </li>
@@ -57,7 +63,7 @@
                 <img src="../image/search.png" alt="Search" height="50%">
             </div>
             </a>
-        <a href="#">
+        <a href="/adgenerate">
         <div class="box"id="box-2">
             <h2 id="secondary">Generate Record</h2>
             <img src="../image/report.png" alt="Report" height="50%">

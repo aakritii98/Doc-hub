@@ -29,7 +29,7 @@ const departmentAddApi = async(data)=>{
     else{
         somethingWentWrong();
         console.log(result.status);
-    }
+    }       
 }
 
 

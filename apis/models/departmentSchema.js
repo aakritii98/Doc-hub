@@ -18,7 +18,23 @@ const departmentSchmema = mongoose.Schema({
     department_password:{
         type:String,
         required:true
+    },
+    phonenumber:{
+        type:Number
+    },
+    city:{
+        type:String
+    },
+    country:{
+        type:String
+    },
+    pincode:{
+        type:Number
+    },
+    state:{
+        type:String
     }
+
 })
 
 

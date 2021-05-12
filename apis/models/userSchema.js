@@ -19,6 +19,30 @@ const userSchema = mongoose.Schema({
         type:String,
         required:true
     },
+    phonenumber:{
+        type:Number
+    },
+    address:{
+        type:String
+    },
+    dateofbirth:{
+        type:String
+    },
+    eduction:{
+        type:String
+    },
+    city:{
+        type:String
+    },
+    country:{
+        type:String
+    },
+    pincode:{
+        type:Number
+    },
+    state:{
+        type:String
+    }
 })
 
 

@@ -33,7 +33,20 @@ const API_LIST = {
     DEPARTMENTSIGNIN:`${API_SERVER}auth/departmentsignin/`,
     TEACHERSIGNIN:`${API_SERVER}auth/teachersignin/`,
 
+    GETTEACHERRECORD:`${API_SERVER}teacherActions/techerRecordGet/`,
+    POSTTEACHERRECORDDELETE:`${API_SERVER}teacherActions/teacherRecordDelete/`,
 
     ADDTEACHERRECORDS:`${API_SERVER}teacherActions/teacherrecordadd/`,
 
+    GETTEACHERRECORDGENERATE:`${API_SERVER}adminActions/techerRecordGenerate/`, 
+    
+    GETADMINDETAILS:`${API_SERVER}admin/getsdmindetails/`,
+    POSTADMINDETAILS:`${API_SERVER}admin/postAdminDetails/`,
+
+    GETDEPARTMENTPROFILEDETAILS:`${API_SERVER}departmentActions/getdepartdetails/`,
+    POSTDEPARTMENTPROFILEDETAILS:`${API_SERVER}departmentActions/postdepartDetails/`,
+
+
+    GETTEACHERPROFILEDETAILS:`${API_SERVER}teacherActions/getteacherdetails/`,
+    POSTTEACHERPROFILEDETAILS:`${API_SERVER}teacherActions/postteacherDetails/`,
 }

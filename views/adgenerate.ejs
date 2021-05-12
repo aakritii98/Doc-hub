@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/checkAdmin.js"></script>
+    <script src="../js/adgenerate.js"></script>
+
+    <script src="../js/ajax.js"></script>
+    <script src="../js/endpoints.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+    <title>Document</title>
+    <link href='../CSS/adgenerate.css' rel="stylesheet">
+    <script>
+        let token = localStorage.getItem("TOKEN");
+        if (!token && token.length == 0) {
+            window.location.href = "/"
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="frame">
+            <div ng-app ng-init="checked = false">
+                    <label for="recodetype">Record Type</label>
+                    <select name="rtype" class="form-styling" id="rtype">
+                        <option hidden=""></option>
+                        <option value="research" id="ResearchProject">Research Project</option>
+                        <option value="conference" id="conference">Conference </option>
+                        <option value="workshop" id="workshop">Workshop</option>
+                        <option value="seminar" id="seminar">Seminar</option>
+                        <option value="symposia" id="symposia">Symposia</option>
+                        <option value="publications" id="Publications">Publications</option>
+                        <option value="books" id="Books">Books</option>
+                        <option value="academic_award" id="awards">Academic Awards</option>
+                    </select>
+                    <label for="departname">Name of Department</label>
+                    <input class="form-styling" type="text" name="departname" id="departmentAddGenerate" placeholder="" />
+                    <!-- <label for="fdate">From</label> <input class="form-styling" type="date" name="fdate"
+                        placeholder=""  />
+                        <label for="fdate">To</label> <input class="form-styling" type="date" name="fdate"
+                        placeholder=""  />     -->
+                    <div class="btn-animate"> <button class="btn" id='GenerateSubmitButtonId'>Generate</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

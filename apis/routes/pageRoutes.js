@@ -48,6 +48,9 @@ router.get('/finaleditprofile',(req,res)=>{
 router.get('/departmenteditprofile',(req,res)=>{
     res.render('departmenteditprofile');
 })
+router.get('/teachereditprofile',(req,res)=>{
+    res.render('finaleditprofileT');
+})
 
 router.get('/teacher',(req,res)=>{
     res.render('teacher');
@@ -92,5 +95,27 @@ router.get("/depart",(req,res)=>{
     res.render('depart');
 })
 
+router.get('/viewrecord',(req,res)=>{
+    res.render('viewrecord');
+
+})
+
+router.get('/adgenerate',(req,res)=>{
+    res.render('adgenerate');
+
+})
+router.get('/dpgenerate',(req,res)=>{
+    res.render('dpgenerate');
+
+})
+router.get('/viewGenerate',(req,res)=>{
+    res.render('view_generate_report');
+
+})
+
+router.get('/viewDepartmentGenerate',(req,res)=>{
+    res.render('view_department_report');
+
+})
 
 module.exports = router

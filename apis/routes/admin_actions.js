@@ -4,6 +4,7 @@ const jwt = require('jsonwebtoken');
 const router = express.Router();
 const Department = require('../models/departmentSchema');
 
+const Teacher = require('../models/teacherSchema');
 
 
 
@@ -90,5 +91,23 @@ router.get('/viewdepartment',(req,res)=>{
 
 })
 
+router.get('/techerRecordGenerate',(req,res)=>{
+    const departmentName = req.body.department_name;
+    Teacher.find({}).then((result)=>{
+        if(result){
+            res.json({
+                status:'success',
+                message:'view success',
+                data:result
+            });
+        }
+        else{
+            res.json({
+                status:'failure',
+                message:'No data found',
+            })
+        }
+    })
 
+})
 module.exports = router

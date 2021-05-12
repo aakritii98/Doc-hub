@@ -3,7 +3,7 @@ const passport = require('passport');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
 const Teacher = require('../models/teacherSchema');
-
+const Department = require('../models/departmentSchema');
 
 router.post('/teacheradd',(req,res,next)=>{
     console.log('hello');
@@ -67,6 +67,7 @@ router.post('/teacherremove',(req,res)=>{
 })
 
 
+
 router.get('/teacher_view',(req,res)=>{
     const departmentId = req.user.department_id;
     console.log(departmentId,"helllo buddy");
@@ -87,4 +88,57 @@ router.get('/teacher_view',(req,res)=>{
     })
 
 })
+
+
+
+
+
+
+router.get('/getdepartdetails',(req,res)=>{
+    console.log("hello sir");
+    const departmentId = req.user.department_id;
+    console.log(departmentId,"helllo buddy");
+    Department.findOne({department_id:departmentId}).then((result)=>{
+        if(result){
+            res.json({
+                status:'success',
+                message:'view success',
+                data:result
+            });
+        }
+        else{
+            res.json({
+                status:'failure',
+                message:'No data found',
+            })
+        }
+    })
+
+})
+
+router.post("/postdepartDetails", (req, res)=>{
+    const data = req.body;
+    console.log(data);
+    Department.findOneAndUpdate({department_id:data.email},   {name: data.name, phonenumber:data.phonenumber,city:data.city,pincode:data.pincode,country:data.country,state:data.state }).then((doc)=>{
+        if(!doc)
+        {
+            console.log(err);
+            res.json({
+               status:'error',
+               message:'something went wrong'
+           })
+        }
+        else
+        {
+           res.json({
+               status:'success',
+               message:'successfully saved',
+              
+           })
+        }
+    });
+   
+});
+
+
 module.exports = router

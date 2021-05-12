@@ -15,6 +15,9 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+
+    <script src="../js/sweetalert.js"></script>
     <title>Document</title>
     <style>
         @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
@@ -129,18 +132,18 @@
         }
 
         #rname8 {
-             /* margin-left: -10px; */
+            /* margin-left: -10px; */
             width: 200px;
         }
 
         #amt8 {
-             /* margin-left: -10px; */
+            /* margin-left: -10px; */
             width: 200px;
         }
 
         #rtitle8 {
             margin-top: 10px;
-             /* margin-left: -10px; */
+            /* margin-left: -10px; */
             width: 200px;
             height: 30px;
         }
@@ -226,12 +229,12 @@
         }
 
         #rdate2 {
-             /* margin-left: -10px; */
+            /* margin-left: -10px; */
             width: 450px;
         }
 
         #rdetails2 {
-             /* margin-left: -10px; */
+            /* margin-left: -10px; */
             width: 425px;
             height: 100px;
         }
@@ -350,27 +353,27 @@
         }
 
         #rnature5 {
-             /* margin-left: -10px; */
+            /* margin-left: -10px; */
             width: 425px;
         }
 
         #rtitle5 {
-             /* margin-left: -10px; */
+            /* margin-left: -10px; */
             width: 425px;
         }
 
         #rplace5 {
-             /* margin-left: -10px; */
+            /* margin-left: -10px; */
             width: 425px;
         }
 
         #rdate5 {
-             /* margin-left: -10px; */
+            /* margin-left: -10px; */
             width: 425px;
         }
 
         #rdetails5 {
-             /* margin-left: -10px; */
+            /* margin-left: -10px; */
             width: 425px;
             height: 100px;
         }
@@ -436,27 +439,27 @@
         }
 
         #rnature3 {
-             /* margin-left: -10px; */
+            /* margin-left: -10px; */
             width: 425px;
         }
 
         #rtitle3 {
-             /* margin-left: -10px; */
+            /* margin-left: -10px; */
             width: 425px;
         }
 
         #rplace3 {
-             /* margin-left: -10px; */
+            /* margin-left: -10px; */
             width: 425px;
         }
 
         #rdate3 {
-             /* margin-left: -10px; */
+            /* margin-left: -10px; */
             width: 425px;
         }
 
         #rdetails3 {
-             /* margin-left: -10px; */
+            /* margin-left: -10px; */
             width: 425px;
             height: 100px;
         }
@@ -523,27 +526,27 @@
         }
 
         #rnature6 {
-             /* margin-left: -10px; */
+            /* margin-left: -10px; */
             width: 425px;
         }
 
         #rtitle6 {
-             /* margin-left: -10px; */
+            /* margin-left: -10px; */
             width: 425px;
         }
 
         #rplace6 {
-             /* margin-left: -10px; */
+            /* margin-left: -10px; */
             width: 425px;
         }
 
         #rdate6 {
-             /* margin-left: -10px; */
+            /* margin-left: -10px; */
             width: 425px;
         }
 
         #rdetails6 {
-             /* margin-left: -10px; */
+            /* margin-left: -10px; */
             width: 425px;
             height: 100px;
         }
@@ -725,9 +728,9 @@
                             <!-- <label for="doctype">Enter Record Nature:</label> -->
                             <select name="rnature" id="rnature2" onchange="populate(this.id,'rtitle2')">
                                 <option hidden>Nature of Conference</option>
-                                <option value="Organized" id="Organized">Organized</option>
-                                <option value="member" id="memeber">Chairperson/moderator/member</option>
-                                <option value="Participation" id="Participation">Participation </option>
+                                <option value="Organized" id="Organized1">Organized</option>
+                                <option value="member" id="memeber1">Chairperson/moderator/member</option>
+                                <option value="Participation" id="Participation1">Participation </option>
                             </select><br>
                         </div>
                         <div class="input-container2">
@@ -773,7 +776,7 @@
                             </script>
                         </div>
 
-                        <button class="btn2"  id="conferenceAddSubmitButtonId">Add</button>
+                        <button class="btn2" id="conferenceAddSubmitButtonId">Add</button>
 
                     </div>
                 </div>
@@ -782,15 +785,14 @@
         <div id='publicationsAddDivId' class="container box7" style="display: none;">
             <div class="row">
                 <div class="col-lg-6 col-md-5 col-6" id="imaged">
-                    <img src="../image/addpub.jpg"
-                        style="height:29.7rem;width:100%;margin-top: 35px;margin-left: 10%;">
+                    <img src="../image/addpub.jpg" style="height:29.7rem;width:100%;margin-top: 35px;margin-left: 10%;">
                 </div>
 
                 <div class="col-lg-6 col-md-7 col-6">
                     <div style="margin-top: 150px;margin-left: 25%;">
                         <div class="input-container7">
                             <!-- <label for="jnature">Enter Journal nature:</label> -->
-                            <select name="jnature">
+                            <select name="jnature" id="jnature1">
                                 <option hidden>Nature of Journal</option>
                                 <option value="A1" size=90>A1 Journal</option>
                                 <option value="A2" size=90>A2 Journal</option>
@@ -812,7 +814,7 @@
                             <!-- <label for="jdate">Enter Date of acceptance:</label> -->
                             <input type="date" id="jdate7" name="jdate" placeholder="Date of acceptance"><br>
                         </div>
-                        <button class="btn7"  id="publicationsAddSubmitButtonId">Add</button>
+                        <button class="btn7" id="publicationsAddSubmitButtonId">Add</button>
 
                     </div>
                 </div>
@@ -880,7 +882,7 @@
                             </script>
                         </div>
 
-                        <button class="btn5"  id="seminarAddSubmitButtonId">Add</button>
+                        <button class="btn5" id="seminarAddSubmitButtonId">Add</button>
 
                     </div>
                 </div>
@@ -951,7 +953,7 @@
                             </script>
                         </div>
 
-                        <button class="btn3"  id="symposiaAddSubmitButtonId">Add</button>
+                        <button class="btn3" id="symposiaAddSubmitButtonId">Add</button>
 
                     </div>
                 </div>
@@ -1026,7 +1028,7 @@
                             </script>
                         </div>
 
-                        <button class="btn6"  id="workshopAddSubmitButtonId">Add</button>
+                        <button class="btn6" id="workshopAddSubmitButtonId">Add</button>
 
                     </div>
                 </div>
@@ -1090,7 +1092,7 @@
                             <!-- <label for="bdate">Enter date of publication:</label> -->
                             <input type="date" id="bdate4" name="bdate" placeholder="Date of publication"><br>
                         </div>
-                        <button class="btn4"  id="bookAddSubmitButtonId">Add</button>
+                        <button class="btn4" id="bookAddSubmitButtonId">Add</button>
                     </div>
                 </div>
             </div>
@@ -1132,7 +1134,7 @@
                             <textarea type="string" id="adetails1" name="adetails"
                                 placeholder="Details of Award"></textarea><br>
                         </div>
-                        <button class="btn1"  id="awardAddSubmitButtonId">Add</button>
+                        <button class="btn1" id="awardAddSubmitButtonId">Add</button>
                     </div>
                 </div>
             </div>
