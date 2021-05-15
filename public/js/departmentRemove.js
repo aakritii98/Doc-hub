@@ -31,11 +31,26 @@ const getUserInputValues =()=>{
         console.log("details are not filled properly,try again...");
     };
 }
+const getUserInputV =()=>{
+    const dataObj = {}
+    dataObj.department_id = $("#form34RemoveD").val();
+    if(checkValidation(dataObj)){
+        confirmAlert(departmentRemoveApi,dataObj);
+    }
+    else{
+        console.log("details are not filled properly,try again...");
+    };
+}
 
 const loadDepartmentAddClicks = ()=>{
     $('#departmentRemoveSubmitButtonID').unbind();
     $('#departmentRemoveSubmitButtonID').click(()=>{
         getUserInputValues();
+    });
+
+    $('#removeDId').unbind();
+    $('#removeDId').click(()=>{
+        getUserInputV();
     });
 } 
 

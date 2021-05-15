@@ -15,14 +15,14 @@ const requireAuth = passport.authenticate("jwt", { session: false });
 
 require('./auth/passport');
 require('./auth/departmentAuth');
-mongoose.connect("mongodb+srv://DocHub:DocHub21@cluster0.ud6bg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority" ,  { useNewUrlParser: true,
+// mongoose.connect("mongodb+srv://DocHub:DocHub21@cluster0.ud6bg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority" ,  { useNewUrlParser: true,
+//    useUnifiedTopology: true,
+//    useCreateIndex: true,
+//    useFindAndModify: false})
+   mongoose.connect("mongodb://localhost:27017/DocHub" ,  { useNewUrlParser: true,
    useUnifiedTopology: true,
    useCreateIndex: true,
-   useFindAndModify: false})
-  //  mongoose.connect("mongodb://localhost:27017/DocHub" ,  { useNewUrlParser: true,
-  //  useUnifiedTopology: true,
-  //  useCreateIndex: true,
-  //  useFindAndModify: false});
+   useFindAndModify: false});
 
 
 const app = express();

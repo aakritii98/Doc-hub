@@ -1,10 +1,10 @@
-const checkauthAPI = async()=>{
+const checkkTeacherAPI = async()=>{
     const api = API_LIST['CHECKTEACHER'];
     try {
         const result = await ajax(REQUEST_TYPE["GET"],api,{});
         console.log(result);
         if(!result || !(result.status=="success")){
-            window.location.href='/teacher';
+            window.location.href='/';
         }     
     } catch (error) {
         if(error.statusText == "Unauthorized"){
@@ -18,7 +18,7 @@ const checkauthAPI = async()=>{
 const checkToken=()=>{
     let token = localStorage.getItem("TOKEN");
             if (token && token.length > 12) {
-                checkauthAPI();
+                checkkTeacherAPI();
             }
             else{
                 window.location.href='/'

@@ -13,8 +13,13 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+
     <script src="../js/checkAdmin.js"></script>
+    <script src="../js/sweetalert.js"></script>
     <script src="../js/departmentview.js"></script>
+
+    <script src="../js/departmentRemove.js"></script>
     <script src="../js/ajax.js"></script>
     <script src="../js/endpoints.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -127,13 +132,13 @@
                 </div>
                 <div class="modal-body mx-3">
                     <div class="md-form mb-5">
-                        <input type="text" id="form34" class="form-control validate">
+                        <input type="text" id="form34RemoveD" class="form-control validate">
                         <label data-error="wrong" data-success="right" for="form34">Department ID</label>
                     </div>
 
                 </div>
                 <div class="modal-footer d-flex justify-content-center">
-                    <button class="btn btn-primary font-weight-bold mb1 bg-blue">REMOVE </button>
+                    <button class="btn btn-primary font-weight-bold mb1 bg-blue" id="removeDId">REMOVE </button>
                 </div>
             </div>
         </div>

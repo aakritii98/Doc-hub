@@ -19,6 +19,8 @@
     <title>Doc Hub</title>
     <link href="../CSS/teacher_view.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+
     <script>
         function changeLanguage(language) {
             var element = document.getElementById("url");
@@ -124,13 +126,13 @@
                 </div>
                 <div class="modal-body mx-3">
                     <div class="md-form mb-5">
-                        <input type="text" id="form34" class="form-control validate">
-                        <label data-error="wrong" data-success="right" for="form34">Teacher ID</label>
+                        <input type="text" id="form34TteacherRemove"  class="form-control validate">
+                        <label data-error="wrong" data-success="right"  for="form34">Teacher ID</label>
                     </div>
 
                 </div>
                 <div class="modal-footer d-flex justify-content-center">
-                    <button class="btn btn-primary font-weight-bold mb1 bg-blue">REMOVE </button>
+                    <button class="btn btn-primary font-weight-bold mb1 bg-blue" id="removeFromPopup">REMOVE </button>
                 </div>
             </div>
         </div>
@@ -149,6 +151,8 @@
     <script src="../js/sweetalert.js"></script>
     <script src="../js/checkDepart.js"></script>
     <script src="../js/teacher_js/teacher_view.js"></script>
+    <script src="../js/teacher_js/teacher_remove.js"></script>
+
     <script src="../js/ajax.js"></script>
     <script src="../js/endpoints.js"></script>
 </body>

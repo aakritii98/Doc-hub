@@ -89,7 +89,7 @@ passport.use(
                 let email = token.user;
                 let depart = token.department;
                 let teach = token.teacher;
-                console.log(email,depart);
+                console.log(email,depart,teach);
                 if(email){
                     let user = await User.findOne({email:email});
                     done(null,user); 

@@ -30,11 +30,28 @@ const getUserInputValuesTeacher =()=>{
         console.log("details are not filled properly,try again...");
     };
 }
+const getUserInputValuesT =()=>{
+    const dataObj = {};
+    dataObj.teacher_id = $("#form34TteacherRemove").val();
+    console.log( dataObj.teacher_id);
+    if(checkValidation(dataObj)){
+        confirmAlert(teacherRemoveApi,dataObj);
+    }
+    else{
+        console.log("details are not filled properly,try again...");
+    };
+}
+
 
 const loadTeacherAddClicks = ()=>{
     $('#teacherRemoveSubmitButtonID').unbind();
     $('#teacherRemoveSubmitButtonID').click(()=>{
         getUserInputValuesTeacher();
+    });
+
+    $('#removeFromPopup').unbind();
+    $('#removeFromPopup').click(()=>{
+        getUserInputValuesT();
     });
 } 
 

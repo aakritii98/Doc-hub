@@ -39,10 +39,15 @@ const getUserInputValues =()=>{
     $('#rtype').each(function(){
         dataObj.recordType = $(this).val();
     });
+    $('#ryear').each(function(){
+        dataObj.recordYear = $(this).val();
+    });
     dataObj.department_name = $("#departmentAddGenerate").val();
     if(checkValidation(dataObj)){
         window.localStorage.setItem("DEPARTMENT_NAME",dataObj.department_name);
         window.localStorage.setItem("RECORD_TYPE",dataObj.recordType);
+        window.localStorage.setItem("RECORD_YEAR",dataObj.recordYear);
+
         window.location.href="/viewGenerate"
         // adGenerateRecordApi(dataObj);
     }
