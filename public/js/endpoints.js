@@ -49,4 +49,8 @@ const API_LIST = {
 
     GETTEACHERPROFILEDETAILS:`${API_SERVER}teacherActions/getteacherdetails/`,
     POSTTEACHERPROFILEDETAILS:`${API_SERVER}teacherActions/postteacherDetails/`,
+
+
+    GETALLTEACHERSADMIN:`${API_SERVER}adminActions/teacher_view_admin/`,
+
 }

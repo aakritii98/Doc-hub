@@ -60,7 +60,9 @@ router.get('/trecords',(req,res)=>{
     res.render('trecords');
 
 })
-
+router.get('/adminTeacherList',(req,res)=>{
+    res.render('teacher_view_admin');
+})
 
 router.get('/adresearch',(req,res)=>{
     res.render('adresearch');

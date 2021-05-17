@@ -110,4 +110,26 @@ router.get('/techerRecordGenerate',(req,res)=>{
     })
 
 })
+
+router.get('/teacher_view_admin',(req,res)=>{
+    Teacher.find({}).then((result)=>{
+        if(result){
+            res.json({
+                status:'success',
+                message:'view success',
+                data:result
+            });
+        }
+        else{
+            res.json({
+                status:'failure',
+                message:'No data found',
+            })
+        }
+    })
+
+})
+
+
+
 module.exports = router
